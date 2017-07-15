@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menü", style: .plain, target: self, action: #selector(handelMenu))
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     
+  
     
     }
 

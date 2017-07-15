@@ -26,9 +26,13 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        
 
 
     }
+    
+
+    
     
     func backAction(){
         self.navigationController?.popViewController(animated: true)
@@ -37,7 +41,6 @@ class MenuViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
