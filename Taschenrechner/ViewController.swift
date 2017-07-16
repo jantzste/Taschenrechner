@@ -14,20 +14,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-        
-        //create left NavigationButton
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menü", style: .plain, target: self, action: #selector(handelMenu))
-        navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-    
-  
+
+        addNaviBar()
     
     }
+    
+    
+    func addNaviBar(){
+        //create left NavigationButton
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handelMenu))
+        //set the color 
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+ 
+    }
+    
+    
 
     func handelMenu(){
         let menuController = MenuViewController()
         present(menuController, animated: true, completion: nil)
     }
     
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

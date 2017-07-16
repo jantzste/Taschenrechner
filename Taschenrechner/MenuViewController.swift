@@ -22,21 +22,46 @@ class MenuViewController: UIViewController {
     
     
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         
+        setNaviBar()
+        
 
 
     }
     
+    //add the navigationBar
+    func setNaviBar(){
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 80))
+  
+        
+        let navItem = UINavigationItem(title: "Verlauf")
+        
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
+        navItem.rightBarButtonItem = doneItem
+        navBar.setItems([navItem], animated: false)
+        self.view.addSubview(navBar)
+        
 
-    
-    
-    func backAction(){
-        self.navigationController?.popViewController(animated: true)
+        
     }
+    
+    //methode muss noch definiert werden
+    func done(){
+        
+    }
+ 
+//    
+//    func backAction(){
+//        self.navigationController?.popViewController(animated: true)
+//    }
     
 
     override func didReceiveMemoryWarning() {

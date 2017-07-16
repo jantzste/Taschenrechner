@@ -520,6 +520,7 @@
 				F5D1A4A91F198EE20052420D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5D1A4AA1F198EE20052420D /* Build configuration list for PBXNativeTarget "TaschenrechnerTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				F5D1A4AC1F198EE20052420D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5D1A4AD1F198EE20052420D /* Build configuration list for PBXNativeTarget "TaschenrechnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				F5D1A4AF1F198EE20052420D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
