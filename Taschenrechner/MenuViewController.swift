@@ -38,28 +38,28 @@ class MenuViewController: UIViewController {
         
     }
     
-    //add the navigationBar
+//add the navigationBar
     func setNaviBar(){
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-
+//make the screenSize automatically
         let screenSize: CGRect = UIScreen.main.bounds
-        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 80))
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
         
         let navItem = UINavigationItem(title: "Verlauf")
-        
-        
-        
-        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(done))
-        navItem.leftBarButtonItem = doneItem
+        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelItem))
+        navItem.leftBarButtonItem = backButton
         navBar.setItems([navItem], animated: false)
         self.view.addSubview(navBar)
+        
+        //change the color of Navigationbar and change the tintcolor
         UINavigationBar.appearance().tintColor = UIColor.white
         navBar.barTintColor = UIColor.black
         navBar.isTranslucent = false
     }
     
+    
     //methode muss noch definiert werden
-    func done(){
+    func cancelItem(){
         
         
         
@@ -67,21 +67,16 @@ class MenuViewController: UIViewController {
         
     }
     
-    //
-    //    func backAction(){
-    //        self.navigationController?.popViewController(animated: true)
-    //    }
+    
+//        func backAction(){
+//            self.navigationController?.popViewController(animated: true)
+//        }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
-    //change the color of the statutsbar to white
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
-    }
+
     
 }
 extension UIColor{

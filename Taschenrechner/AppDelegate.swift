@@ -22,8 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //this is the bridge between AppDelegate and the class ViewController
         window?.rootViewController = UINavigationController(rootViewController: ViewController())
-        
-        
+    
+        UIApplication.shared.statusBarStyle = .lightContent
+    
         return true
     }
 
