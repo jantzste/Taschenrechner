@@ -29,10 +29,13 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setNaviBar()
+
         
     }
+    
+
+    
     
     func button(){
         
@@ -46,12 +49,18 @@ class MenuViewController: UIViewController {
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
         
         let navItem = UINavigationItem(title: "Verlauf")
-        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelItem))
+
+       
+        
+       let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelItem))
+        
         navItem.leftBarButtonItem = backButton
         navBar.setItems([navItem], animated: false)
         self.view.addSubview(navBar)
         
+    
         //change the color of Navigationbar and change the tintcolor
+
         UINavigationBar.appearance().tintColor = UIColor.white
         navBar.barTintColor = UIColor.black
         navBar.isTranslucent = false
@@ -60,18 +69,11 @@ class MenuViewController: UIViewController {
     
     //methode muss noch definiert werden
     func cancelItem(){
+
         
-        
-        
-        //self.navigationController?.popViewController(animated: true)
         
     }
-    
-    
-//        func backAction(){
-//            self.navigationController?.popViewController(animated: true)
-//        }
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
