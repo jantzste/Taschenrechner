@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
      
         setNaviBar()
+        plusButton()
+        minusButton()
     
     }
     
@@ -52,7 +54,48 @@ class ViewController: UIViewController {
         present(menuController, animated: true, completion: nil)
     }
     
+    func plusButton (){
+    
+        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 400, width: 100, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("+", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(plusButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func plusButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func minusButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 210, y: 400, width: 100, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("-", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(minusButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func minusButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
