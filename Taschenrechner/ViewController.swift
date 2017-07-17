@@ -33,6 +33,17 @@ class ViewController: UIViewController {
         minusButton()
         divideButton()
         sumButton()
+        finalResultButton()
+        numberSevenButton()
+        numberEightButton()
+        numberNineButton()
+        numberFourButton()
+        numberFiveButton()
+        numberSixButton()
+        numberThreeButton()
+        numberTwoButton()
+        numberOneButton()
+        numberZeroButton()
     
     }
     
@@ -58,7 +69,7 @@ class ViewController: UIViewController {
     
     func plusButton (){
     
-        let btn: UIButton = UIButton(frame: CGRect(x: 16, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 500, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("+", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(plusButtonAction), for: UIControlEvents.touchUpInside)
@@ -78,7 +89,7 @@ class ViewController: UIViewController {
     
     func minusButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 116, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 450, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("-", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(minusButtonAction), for: UIControlEvents.touchUpInside)
@@ -99,7 +110,7 @@ class ViewController: UIViewController {
     
     func divideButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 216, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 350, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("/", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(divideButtonAction), for: UIControlEvents.touchUpInside)
@@ -136,6 +147,230 @@ class ViewController: UIViewController {
             print("nicht gedrückt")
         }
     }
+    
+    func finalResultButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 550, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("=", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(finalResultButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func finalResultButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("mal gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberSevenButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 350, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("7", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberSevenButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberSevenButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("7 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberEightButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 350, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("8", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberEightButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberEightButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("8 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberNineButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 190, y: 350, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("9", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberNineButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberNineButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("9 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberFourButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 400, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("4", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberFourButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberFourButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("4 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberFiveButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 400, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("5", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberFiveButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberFiveButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("5 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberSixButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 190, y: 400, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("6", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberSixButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberSixButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("6 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    
+    func numberThreeButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 450, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("3", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberThreeButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberThreeButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("3 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    
+    func numberTwoButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 450, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("2", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberTwoButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberTwoButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("2 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    func numberOneButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 190, y: 450, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("1", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberOneButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberOneButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("1 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
+    
+    func numberZeroButton (){
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 500, width: 80, height: 50))
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("0", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(numberZeroButtonAction), for: UIControlEvents.touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+    }
+    
+    func numberZeroButtonAction(sender: UIButton!){
+        var btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1{
+            //do anything here
+            print("0 gedrückt")
+        }else{
+            print("nicht gedrückt")
+        }
+    }
+    
 
     
 
