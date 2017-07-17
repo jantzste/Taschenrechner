@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     
     func plusButton (){
     
-        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 500, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 540, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("+", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(plusButtonAction), for: UIControlEvents.touchUpInside)
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     func minusButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 450, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 480, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("-", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(minusButtonAction), for: UIControlEvents.touchUpInside)
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
     
     func divideButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 350, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 360, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("/", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(divideButtonAction), for: UIControlEvents.touchUpInside)
@@ -130,7 +130,7 @@ class ViewController: UIViewController {
     
     func sumButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 420, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("*", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(sumButtonAction), for: UIControlEvents.touchUpInside)
@@ -150,7 +150,7 @@ class ViewController: UIViewController {
     
     func finalResultButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 550, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 600, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("=", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(finalResultButtonAction), for: UIControlEvents.touchUpInside)
@@ -170,7 +170,7 @@ class ViewController: UIViewController {
     
     func numberSevenButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 350, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 20, y: 420, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("7", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberSevenButtonAction), for: UIControlEvents.touchUpInside)
@@ -190,7 +190,7 @@ class ViewController: UIViewController {
     
     func numberEightButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 350, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 110, y: 420, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("8", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberEightButtonAction), for: UIControlEvents.touchUpInside)
@@ -210,7 +210,7 @@ class ViewController: UIViewController {
     
     func numberNineButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 190, y: 350, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 200, y: 420, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("9", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberNineButtonAction), for: UIControlEvents.touchUpInside)
@@ -230,7 +230,7 @@ class ViewController: UIViewController {
     
     func numberFourButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 20, y: 480, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("4", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberFourButtonAction), for: UIControlEvents.touchUpInside)
@@ -250,7 +250,7 @@ class ViewController: UIViewController {
     
     func numberFiveButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 110, y: 480, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("5", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberFiveButtonAction), for: UIControlEvents.touchUpInside)
@@ -270,7 +270,7 @@ class ViewController: UIViewController {
     
     func numberSixButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 190, y: 400, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 200, y: 480, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("6", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberSixButtonAction), for: UIControlEvents.touchUpInside)
@@ -291,7 +291,7 @@ class ViewController: UIViewController {
     
     func numberThreeButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 450, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 20, y: 540, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("3", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberThreeButtonAction), for: UIControlEvents.touchUpInside)
@@ -312,7 +312,7 @@ class ViewController: UIViewController {
     
     func numberTwoButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 450, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 110, y: 540, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("2", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberTwoButtonAction), for: UIControlEvents.touchUpInside)
@@ -332,7 +332,7 @@ class ViewController: UIViewController {
     
     func numberOneButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 190, y: 450, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 200, y: 540, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("1", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberOneButtonAction), for: UIControlEvents.touchUpInside)
@@ -353,7 +353,7 @@ class ViewController: UIViewController {
     
     func numberZeroButton (){
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 500, width: 80, height: 50))
+        let btn: UIButton = UIButton(frame: CGRect(x: 110, y: 600, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("0", for: UIControlState.normal)
         btn.addTarget(self, action: #selector(numberZeroButtonAction), for: UIControlEvents.touchUpInside)
