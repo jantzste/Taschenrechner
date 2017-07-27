@@ -34,16 +34,18 @@ class ViewController: UIViewController {
         divideButton()
         sumButton()
         finalResultButton()
-        numberSevenButton()
-        numberEightButton()
-        numberNineButton()
-        numberFourButton()
-        numberFiveButton()
-        numberSixButton()
-        numberThreeButton()
-        numberTwoButton()
-        numberOneButton()
-        numberZeroButton()
+//        numberSevenButton()
+//        numberEightButton()
+//        numberNineButton()
+//        numberFourButton()
+//        numberFiveButton()
+//        numberSixButton()
+//        numberThreeButton()
+//        numberTwoButton()
+//        numberOneButton()
+//        numberZeroButton()
+        textFieldNumberOne()
+        textFieldNumberTwo()
     
     }
     
@@ -371,7 +373,39 @@ class ViewController: UIViewController {
         }
     }
     
-
+    func textFieldNumberOne(){
+        let sampleTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40))
+        sampleTextField.placeholder = "Zahl einfügen"
+        sampleTextField.font = UIFont.systemFont(ofSize: 15)
+        sampleTextField.borderStyle = UITextBorderStyle.roundedRect
+        //sampleTextField.autocorrectionType = UITextAutocorrectionType.no
+        sampleTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
+        sampleTextField.returnKeyType = UIReturnKeyType.done
+        //sampleTextField.clearButtonMode = UITextFieldViewMode.whileEditing
+        //sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+    
+        self.view.addSubview(sampleTextField)
+    }
+    
+    
+    func textFieldNumberTwo(){
+        let sampleTextField = UITextField(frame: CGRect(x: 20, y: 150, width: 300, height: 40))
+        sampleTextField.placeholder = "Zahl einfügen"
+        sampleTextField.font = UIFont.systemFont(ofSize: 15)
+        sampleTextField.borderStyle = UITextBorderStyle.roundedRect
+        sampleTextField.autocorrectionType = UITextAutocorrectionType.no
+        sampleTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
+        //sampleTextField.returnKeyType = UIReturnKeyType.done
+        //sampleTextField.clearButtonMode = UITextFieldViewMode.whileEditing
+        //sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        self.view.addSubview(sampleTextField)
+  
+    }
+    
+//    func textFieldDidBeginEditing(textField: UITextField){
+//        
+//    }
+// 
     
 
     override func didReceiveMemoryWarning() {
