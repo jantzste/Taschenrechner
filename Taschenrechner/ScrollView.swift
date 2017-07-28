@@ -9,11 +9,11 @@
 import UIKit
 
 class ScrollView: UIViewController {
-
+    
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-  
+    
     
     func scrollView(){
         let blueScrollView = UIScrollView(frame: UIScreen.main.bounds)
@@ -29,9 +29,9 @@ class ScrollView: UIViewController {
         blueScrollView.addSubview(grayView)
         
     }
-
-
- 
-
-
+    
+    
+    
+    
+    
 }

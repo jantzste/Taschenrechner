@@ -8,15 +8,16 @@
 
 import UIKit
 
-class renderButton: UIViewController {
-
+class renderButton: UIButton {
+    
     
     func finalResultButton() -> UIButton{
         
         let btn: UIButton = UIButton(frame: CGRect(x: 316, y: 600, width: 80, height: 50))
         btn.backgroundColor = UIColor.black
         btn.setTitle("=", for: UIControlState.normal)
-        btn.addTarget(self, action: #selector(finalResultButtonAction), for: UIControlEvents.touchUpInside)
+        btn.layer.cornerRadius = 5
+        btn.addTarget(self, action: #selector(finalResultButtonAction), for: .touchUpInside)
         btn.tag = 1
         //self.view.addSubview(btn)
         
@@ -27,13 +28,17 @@ class renderButton: UIViewController {
         var btnSendTag: UIButton = sender
         
         if btnSendTag.tag == 1{
-            //do anything here
+            
+            //dismiss(animated: false, completion: nil)
+            
             print("mal gedrückt")
         }else{
+           // dismiss(animated: true, completion: nil)
+
             print("nicht gedrückt")
         }
     }
     
     
-
+    
 }

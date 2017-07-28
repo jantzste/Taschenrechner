@@ -14,7 +14,7 @@ class MenuViewController: UIViewController {
         
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return view
     }()
     
@@ -30,37 +30,42 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNaviBar()
-
+        
+        //add the finalResultButton
+        let renderScroll = renderScrollView()
+        let scrollView = renderScroll.scrollView()
+        self.view.addSubview(scrollView)
+        
         
     }
     
-
+    
     
     
     func button(){
         
     }
     
-//add the navigationBar
+    //add the navigationBar
     func setNaviBar(){
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-//make the screenSize automatically
+        //make the screenSize automatically
         let screenSize: CGRect = UIScreen.main.bounds
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
         
         let navItem = UINavigationItem(title: "Verlauf")
-
-       
         
-       let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelItem))
+        
+        
+        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelItem))
         
         navItem.leftBarButtonItem = backButton
         navBar.setItems([navItem], animated: false)
         self.view.addSubview(navBar)
         
-    
+        
         //change the color of Navigationbar and change the tintcolor
-
+        
         UINavigationBar.appearance().tintColor = UIColor.white
         navBar.barTintColor = UIColor.black
         navBar.isTranslucent = false
@@ -69,16 +74,17 @@ class MenuViewController: UIViewController {
     
     //methode muss noch definiert werden
     func cancelItem(){
-
+        
+          //dismiss(animated: false, completion: nil)
         
         
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     
 }
 extension UIColor{

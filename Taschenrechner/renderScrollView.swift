@@ -10,18 +10,24 @@ import UIKit
 
 class renderScrollView: UIViewController {
 
-    func scrollView(){
-        let blueScrollView = UIScrollView(frame: UIScreen.main.bounds)
+    func scrollView() -> UIScrollView{
+        let grayScrollView = UIScrollView(frame: CGRect(x: 10, y: 130, width: 395, height: 600))
         
         //let blueScrollView = UIScrollView(frame: CGRect(x: 10, y: 200, width: 400, height: 400))
-        blueScrollView.backgroundColor = UIColor.blue
-        blueScrollView.contentSize = CGSize(width: 200 , height: 200)
-        blueScrollView.contentOffset = CGPoint(x: 10, y: 20)
+        grayScrollView.backgroundColor = UIColor(r: 239, g: 240, b: 241)
+        grayScrollView.contentSize = CGSize(width: 200 , height: 200)
+        grayScrollView.contentOffset = CGPoint(x: 10, y: 20)
+        
+        grayScrollView.contentSize = CGSize(width: 100, height: 100)
+
         
         
-        let grayView = UIView(frame: CGRect(x: 20, y: 20, width: 500, height: 4000))
-        grayView.backgroundColor = UIColor.gray
-        blueScrollView.addSubview(grayView)
+        let whiteView = UIView(frame: CGRect(x: 20, y: 20, width: 350, height: 550))
+        whiteView.backgroundColor = UIColor.white
+        whiteView.layer.cornerRadius = 5
+        grayScrollView.addSubview(whiteView)
+        
+        return grayScrollView
         
     }
 
