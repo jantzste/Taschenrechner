@@ -30,9 +30,16 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNaviBar()
- 
+
+        
     }
     
+
+    
+    
+    func button(){
+        
+    }
     
 //add the navigationBar
     func setNaviBar(){
