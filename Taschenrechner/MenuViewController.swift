@@ -31,7 +31,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         setNaviBar()
         
-        //add the finalResultButton
+        //add scrollView
         let renderScroll = renderScrollView()
         let scrollView = renderScroll.scrollView()
         self.view.addSubview(scrollView)

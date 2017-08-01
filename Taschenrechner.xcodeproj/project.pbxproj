@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F51F33AF1F2ABB0400E990DD /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F33AE1F2ABB0400E990DD /* ScrollView.swift */; };
 		F51F33B11F2AC17C00E990DD /* renderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F33B01F2AC17C00E990DD /* renderButton.swift */; };
 		F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F33B41F2AC4A300E990DD /* renderScrollView.swift */; };
 		F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4821F198EE20052420D /* AppDelegate.swift */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F51F33AE1F2ABB0400E990DD /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		F51F33B01F2AC17C00E990DD /* renderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = renderButton.swift; sourceTree = "<group>"; };
 		F51F33B41F2AC4A300E990DD /* renderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = renderScrollView.swift; sourceTree = "<group>"; };
 		F5D1A47F1F198EE20052420D /* Taschenrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taschenrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +91,6 @@
 		F51F33B71F2AC84500E990DD /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				F51F33AE1F2ABB0400E990DD /* ScrollView.swift */,
 				F51F33B41F2AC4A300E990DD /* renderScrollView.swift */,
 			);
 			name = ScrollView;
@@ -302,7 +299,6 @@
 				F5D1A4851F198EE20052420D /* ViewController.swift in Sources */,
 				F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */,
 				F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */,
-				F51F33AF1F2ABB0400E990DD /* ScrollView.swift in Sources */,
 				F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
