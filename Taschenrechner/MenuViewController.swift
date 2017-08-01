@@ -54,10 +54,8 @@ class MenuViewController: UIViewController {
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
         
         let navItem = UINavigationItem(title: "Verlauf")
-        
-        
-        
-        let backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelItem))
+ 
+        let backButton = UIBarButtonItem(title: "Zurück", style: UIBarButtonItemStyle.plain, target: self, action: #selector (cancelButton))
         
         navItem.leftBarButtonItem = backButton
         navBar.setItems([navItem], animated: false)
@@ -72,11 +70,10 @@ class MenuViewController: UIViewController {
     }
     
     
-    //methode muss noch definiert werden
-    func cancelItem(){
+    //Backbutton
+    func cancelButton(){
         
-          //dismiss(animated: false, completion: nil)
-        
+        dismiss(animated: false, completion: nil)
         
     }
     
