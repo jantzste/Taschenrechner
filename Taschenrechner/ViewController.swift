@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         let renderObj = renderButton()
         let finalResultButton = renderObj.finalResultButton()
         self.view.addSubview(finalResultButton)
+        
+        numberInput()
   
     }
     
@@ -50,12 +52,32 @@ class ViewController: UIViewController {
     }
     
     
+    func numberInput(){
+        
+        let background = UIView(frame: CGRect(x: 0, y: 10, width: 420, height: 80))
+        background.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        self.view.addSubview(background)
+
+        let numberInput = UILabel(frame: CGRect(x: 15, y: 10, width: 385, height: 60))
+        numberInput.text = "test"
+        numberInput.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        numberInput.font = UIFont.italicSystemFont(ofSize: 60)
+
+        background.addSubview(numberInput)
+        
+        
+    }
+    
+    
+ 
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     
 }
 
