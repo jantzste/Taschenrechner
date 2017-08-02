@@ -22,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //this is the bridge between AppDelegate and the class ViewController
         window?.rootViewController = UINavigationController(rootViewController: ViewController())
-    
+        
+        //set the color of the title of navigationbar to white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
+
         UIApplication.shared.statusBarStyle = .lightContent
     
         return true

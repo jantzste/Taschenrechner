@@ -9,24 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    
-    let inputsContainerView: UIView = {
-        
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
-    }()
-    
-    let buttonRound: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = UIColor.brown
-        button.tintColor = UIColor.blue
-        
-        return button
-    }()
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNaviBar()
@@ -36,16 +19,25 @@ class MenuViewController: UIViewController {
         let scrollView = renderScroll.scrollView()
         self.view.addSubview(scrollView)
         
+        setTitel()
+        
         
     }
     
-    
-    
-    
-    func button(){
+    //add a title above of the scrollView
+    func setTitel(){
+        let titel = UILabel(frame: CGRect(x: 10, y: 85, width: 200, height: 21))
+        titel.textAlignment = .left
+        titel.text = "Verlauf"
+        titel.textColor = UIColor.black
+        titel.font = titel.font.withSize(20)
+        
+        self.view.addSubview(titel)
+        
         
     }
     
+
     //add the navigationBar
     func setNaviBar(){
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -53,7 +45,7 @@ class MenuViewController: UIViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
         
-        let navItem = UINavigationItem(title: "Verlauf")
+        let navItem = UINavigationItem(title: "Rechner")
  
         let backButton = UIBarButtonItem(title: "Zurück", style: UIBarButtonItemStyle.plain, target: self, action: #selector (cancelButton))
         
@@ -62,8 +54,7 @@ class MenuViewController: UIViewController {
         self.view.addSubview(navBar)
         
         
-        //change the color of Navigationbar and change the tintcolor
-        
+        //change the color color of Navigationbar to white
         UINavigationBar.appearance().tintColor = UIColor.white
         navBar.barTintColor = UIColor.black
         navBar.isTranslucent = false
