@@ -1,15 +1,15 @@
 //
-//  renderButton.swift
+//  FinalResultButton.swift
 //  Taschenrechner
 //
-//  Created by Stephen Japon Jantz on 28.07.17.
+//  Created by Stephen Japon Jantz on 04.08.17.
 //  Copyright © 2017 Stephen Jantz. All rights reserved.
 //
 
 import UIKit
 
-class renderButton: UIButton {
-    
+class FinalResultButton: UIButton {
+
     
     func finalResultButton() -> UIButton{
         
@@ -19,8 +19,7 @@ class renderButton: UIButton {
         btn.layer.cornerRadius = 5
         btn.addTarget(self, action: #selector(finalResultButtonAction), for: .touchUpInside)
         btn.tag = 1
-        //self.view.addSubview(btn)
-        
+  
         return btn
     }
     
@@ -33,12 +32,12 @@ class renderButton: UIButton {
             
             print("mal gedrückt")
         }else{
-           // dismiss(animated: true, completion: nil)
-
+            // dismiss(animated: true, completion: nil)
+            
             print("nicht gedrückt")
         }
     }
     
-    
-    
+
+
 }

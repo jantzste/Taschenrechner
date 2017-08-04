@@ -17,16 +17,45 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         
         setNaviBar()
-        //add the finalResultButton
-        let renderObj = renderButton()
-        let finalResultButton = renderObj.finalResultButton()
-        self.view.addSubview(finalResultButton)
         
         numberInput()
-  
+        
+        addCalculationButtons()
+    }
+    
+    
+    func addCalculationButtons(){
+        
+        //add the finalResultButton
+        let finalResultBtn = FinalResultButton()
+        let finalResulatCalculation = finalResultBtn.finalResultButton()
+        self.view.addSubview(finalResulatCalculation)
+        
+        
+        //add the pulsButton
+        let plusBtn = PlusButton()
+        let plusCalculation = plusBtn.plusButton()
+        self.view.addSubview(plusCalculation)
+        
+        //add the minusButton
+        let minusBtn = MinusButton()
+        let minusCalculation = minusBtn.minusButton()
+        self.view.addSubview(minusCalculation)
+        
+        
+        //add the divideButton
+        let divideBtn = DivideButton()
+        let divideCalculation = divideBtn.divideButton()
+        self.view.addSubview(divideCalculation)
+        
+        
+        //add the multiplicationButton
+        let multiplicationBtn = MultiplicationButton()
+        let multiplicationCalculation = multiplicationBtn.multiplicationButton()
+        self.view.addSubview(multiplicationCalculation)
+        
     }
     
     
@@ -42,6 +71,10 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.title = "Rechner"
+        
+        //set backgroundColor of homescreen to white
+        self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+
 
     }
     
@@ -67,10 +100,6 @@ class ViewController: UIViewController {
         
         
     }
-    
-    
- 
-    
     
     
     override func didReceiveMemoryWarning() {
