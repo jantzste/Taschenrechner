@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         
         addCalculationButtons()
         
-        handleMore()
     }
     
     
