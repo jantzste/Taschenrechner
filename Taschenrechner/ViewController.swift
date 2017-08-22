@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         numberInput()
         
         addCalculationButtons()
+        
+        handleMore()
     }
     
     
@@ -74,9 +76,22 @@ class ViewController: UIViewController {
         
         //set backgroundColor of homescreen to white
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handleMore))
 
 
     }
+    
+
+    let settingsLauncher = SettingsLauncher()
+    
+    func handleMore(){
+        
+        //show menu
+        settingsLauncher.showSettings()
+    }
+
     
     func handelMenu(){
         let menuController = MenuViewController()
