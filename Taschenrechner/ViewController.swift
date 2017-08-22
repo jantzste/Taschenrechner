@@ -82,11 +82,10 @@ class ViewController: UIViewController {
 
     }
     
-
     let settingsLauncher = SettingsLauncher()
-    
+
     func handleMore(){
-        
+
         //show menu
         settingsLauncher.showSettings()
     }
