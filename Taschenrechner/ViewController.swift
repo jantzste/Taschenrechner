@@ -63,10 +63,14 @@ class ViewController: UIViewController {
     func setNaviBar(){
         
         //create left NavigationButton
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handelMenu))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handleMore))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handelMenu))
  
         //set the color
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+
         
         //set the navigation title
         self.navigationController?.navigationBar.barTintColor = UIColor.black
@@ -76,8 +80,7 @@ class ViewController: UIViewController {
         //set backgroundColor of homescreen to white
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handleMore))
+    
 
 
     }
