@@ -8,6 +8,9 @@
 
 import UIKit
 
+//for the camera
+import AVFoundation
+
 class ViewController: UIViewController {
     
     //    override func viewWillAppear(_ animated: Bool) {
@@ -20,11 +23,15 @@ class ViewController: UIViewController {
         
         setNaviBar()
         
-        numberInput()
+        //numberInput()
         
-        addCalculationButtons()
+        //addCalculationButtons()
+        
+        addScrollView()
         
         firstIconButton()
+        
+     
         
     }
     
@@ -100,6 +107,13 @@ class ViewController: UIViewController {
         
     }
     
+    //add the cardView
+    func addScrollView(){
+        let scrollViewController = renderScrollView()
+        let scrollView = scrollViewController
+        self.view.addSubview(scrollView.scrollView())
+    }
+    
     
    //add the iconButton
     func firstIconButton () -> UIButton{
@@ -124,8 +138,7 @@ class ViewController: UIViewController {
         iconLauncher.showSettings()
 
     }
-    
-    
+
     
     func numberInput(){
         
@@ -142,7 +155,7 @@ class ViewController: UIViewController {
         
         
     }
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
