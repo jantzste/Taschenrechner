@@ -31,7 +31,6 @@ class SettingCell: BaseCell{
     override func setupViews(){
         super.setupViews()
         
-        
        // backgroundColor = UIColor.blue
         
         addSubview(nameLabel)

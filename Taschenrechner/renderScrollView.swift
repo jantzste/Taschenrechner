@@ -13,9 +13,8 @@ class renderScrollView: UIViewController {
 
     //create a ScrollView with that properties
     func scrollView() -> UIScrollView{
-        let grayScrollView = UIScrollView(frame: CGRect(x: 0, y: 60, width: 420, height: 610))
         
-        //let blueScrollView = UIScrollView(frame: CGRect(x: 10, y: 200, width: 400, height: 400))
+        let grayScrollView = UIScrollView(frame: CGRect(x: 0, y: 60, width: 420, height: 610))
         grayScrollView.backgroundColor = UIColor(r: 239, g: 240, b: 241)
         grayScrollView.contentOffset = CGPoint(x: 10, y: 20)
         grayScrollView.contentSize = CGSize(width: 100, height: 100)

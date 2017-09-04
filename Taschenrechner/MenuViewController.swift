@@ -9,19 +9,24 @@
 import UIKit
 
 class MenuViewController: UIViewController {
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNaviBar()
+        
+        setScrollView()
+        
+        setTitel()
+        
+        
+    }
+    
+    func setScrollView(){
         
         //add scrollView
         let renderScroll = renderScrollView()
         let scrollView = renderScroll.scrollView()
         self.view.addSubview(scrollView)
-        
-        setTitel()
-        
-        
     }
     
     //add a title above of the scrollView
@@ -37,7 +42,7 @@ class MenuViewController: UIViewController {
         
     }
     
-
+    
     //add the navigationBar
     func setNaviBar(){
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -46,13 +51,12 @@ class MenuViewController: UIViewController {
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
         
         let navItem = UINavigationItem(title: "Rechner")
- 
+        
         let backButton = UIBarButtonItem(title: "Zurück", style: UIBarButtonItemStyle.plain, target: self, action: #selector (cancelButton))
         
         navItem.leftBarButtonItem = backButton
         navBar.setItems([navItem], animated: false)
         self.view.addSubview(navBar)
-        
         
         //change the color color of Navigationbar to white
         UINavigationBar.appearance().tintColor = UIColor.white
@@ -74,11 +78,5 @@ class MenuViewController: UIViewController {
     }
     
     
-}
-extension UIColor{
-    
-    convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
-        self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
-    }
 }
 

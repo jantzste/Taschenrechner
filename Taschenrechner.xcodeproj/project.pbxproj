@@ -183,8 +183,8 @@
 		F5D1A4811F198EE20052420D /* Taschenrechner */ = {
 			isa = PBXGroup;
 			children = (
-				F58B65BC1F4CD68B005A1420 /* Controller */,
 				F51F33B81F2AC86C00E990DD /* Main */,
+				F58B65BC1F4CD68B005A1420 /* Controller */,
 				F51F33B71F2AC84500E990DD /* ScrollView */,
 				F51F33B61F2AC83B00E990DD /* Button */,
 			);

@@ -57,6 +57,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         
     }
     
+    //dissmiss if click on the blackView
     func handleDismiss() {
         
         UIView.animate(withDuration: 0.5) {
