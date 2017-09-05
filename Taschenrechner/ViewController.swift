@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         
         firstIconButton()
         
+        setTitel()
+        
     }
     
     
@@ -72,6 +74,19 @@ class ViewController: UIViewController {
         let scrollViewController = renderScrollView()
         let scrollView = scrollViewController
         self.view.addSubview(scrollView.scrollView())
+
+    }
+    
+    //add a title above of the scrollView
+    func setTitel(){
+        let titel = UILabel(frame: CGRect(x: 12, y: 20, width: 200, height: 21))
+        titel.textAlignment = .left
+        titel.text = "Homescreen"
+        titel.textColor = UIColor.black
+        titel.font = titel.font.withSize(20)
+        
+        self.view.addSubview(titel)
+        
     }
     
     
