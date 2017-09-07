@@ -31,7 +31,7 @@ class MenuViewController: UIViewController {
     
     //add a title above of the scrollView
     func setTitel(){
-        let titel = UILabel(frame: CGRect(x: 10, y: 85, width: 200, height: 21))
+        let titel = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 21))
         titel.textAlignment = .left
         titel.text = "Verlauf"
         titel.textColor = UIColor.black
@@ -48,15 +48,14 @@ class MenuViewController: UIViewController {
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         //make the screenSize automatically
         let screenSize: CGRect = UIScreen.main.bounds
-        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 60))
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 10))
         
         let navItem = UINavigationItem(title: "Rechner")
-        
-        let backButton = UIBarButtonItem(title: "Zurück", style: UIBarButtonItemStyle.plain, target: self, action: #selector (cancelButton))
-        
-        navItem.leftBarButtonItem = backButton
+
         navBar.setItems([navItem], animated: false)
         self.view.addSubview(navBar)
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
         
         //change the color color of Navigationbar to white
         UINavigationBar.appearance().tintColor = UIColor.white
@@ -64,13 +63,6 @@ class MenuViewController: UIViewController {
         navBar.isTranslucent = false
     }
     
-    
-    //Backbutton
-    func cancelButton(){
-        
-        dismiss(animated: false, completion: nil)
-        
-    }
     
     
     override func didReceiveMemoryWarning() {
