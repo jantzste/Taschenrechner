@@ -35,7 +35,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
 
     let settings: [Setting] = {
         
-        return [Setting(name: "Test0", imageName: "ic_accessibility_36pt"), Setting(name: "Test1", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test2", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test3", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test4", imageName: "ic_3d_rotation_36pt"),Setting(name: "Cancel", imageName: "ic_3d_rotation_36pt")]
+        return [Setting(name: "Einstellung", imageName: "ic_settings_36pt"), Setting(name: "Datenschutz-Bestimmungen", imageName: "ic_lock_36pt"),Setting(name: "Feedback", imageName: "ic_feedback_36pt"),Setting(name: "Hilfe", imageName: "ic_help_36pt"),Setting(name: "Profil", imageName: "ic_account_circle_36pt"),Setting(name: "abbrechen", imageName: "ic_cancel_36pt")]
     }()
     
     var homeController: ViewController?
@@ -87,7 +87,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
         }) { (completed: Bool) in
             
-            if setting.name != "" && setting.name != "Cancel"{
+            if setting.name != "" && setting.name != "abbrechen"{
                 
                 self.homeController?.showControllerForSetting(setting: setting)
                 
