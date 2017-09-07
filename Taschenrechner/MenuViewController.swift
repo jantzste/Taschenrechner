@@ -48,10 +48,10 @@ class MenuViewController: UIViewController {
         view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         //make the screenSize automatically
         let screenSize: CGRect = UIScreen.main.bounds
-        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 10))
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 0))
         
         let navItem = UINavigationItem(title: "Rechner")
-
+        
         navBar.setItems([navItem], animated: false)
         self.view.addSubview(navBar)
         

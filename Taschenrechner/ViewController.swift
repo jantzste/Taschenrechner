@@ -31,13 +31,25 @@ class ViewController: UIViewController {
         
     }
     
+    let buttonMenu1: UIButton = {
+        
+        let buttonG1 = UIButton()
+        buttonG1.backgroundColor = UIColor.red
+        
+        let backgroundimage1 = UIImage(named: "ic_3d_rotation_36pt") as UIImage?
+        buttonG1.setImage(backgroundimage1, for: .normal)
+        
+        return buttonG1
+    }()
+    
     
     func setNaviBar(){
         
-        //create left NavigationButton
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handleMore))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handelMenu))
+        //create left NavigationButton
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handelMenu))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handleMore))
         
         //set the color
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -47,7 +59,7 @@ class ViewController: UIViewController {
         //set the navigation title
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationItem.title = "Rechner"
+        self.navigationItem.title = "Homescreen"
         
         //set backgroundColor of homescreen to white
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -77,8 +89,7 @@ class ViewController: UIViewController {
     
     func handelMenu(){
         let menuController = MenuViewController()
-
-        navigationController?.pushViewController(menuController, animated: true)
+        navigationController?.pushViewController(menuController, animated: false)
     }
     
     //add the cardView
@@ -86,7 +97,7 @@ class ViewController: UIViewController {
         let scrollViewController = renderScrollView()
         let scrollView = scrollViewController
         self.view.addSubview(scrollView.scrollView())
-
+        
     }
     
     //add a title above of the scrollView

@@ -17,11 +17,11 @@ class IconLauncher: NSObject{
         
         let buttonG = UIButton()
         buttonG.backgroundColor = UIColor.red
-
+        
         let backgroundimage = UIImage(named: "ic_3d_rotation_36pt") as UIImage?
         buttonG.setImage(backgroundimage, for: .normal)
-
-
+        
+        
         return buttonG
     }()
     
@@ -36,7 +36,7 @@ class IconLauncher: NSObject{
         
         return buttonG1
     }()
-
+    
     //show menu
     func showSettings(){
         
@@ -53,7 +53,7 @@ class IconLauncher: NSObject{
             
             buttonMenu.frame = CGRect(x: 100, y: 500, width: 25, height: 25)
             buttonMenu1.frame = CGRect(x: 100, y: 600, width: 25, height: 25)
-
+            
             
             blackView.frame = window.frame
             blackView.alpha = 0
@@ -64,7 +64,7 @@ class IconLauncher: NSObject{
                 self.blackView.alpha = 1
                 self.buttonMenu.frame = CGRect(x: 100, y: 200, width: 50, height: 50)
                 self.buttonMenu1.frame = CGRect(x: 100, y: 300, width: 50, height: 50)
-
+                
             } , completion: nil)
             
         }
@@ -81,10 +81,10 @@ class IconLauncher: NSObject{
                 
                 self.buttonMenu.frame = CGRect(x: 100, y: window.frame.height, width: 50, height: 50)
                 self.buttonMenu1.frame = CGRect(x: 100, y: window.frame.height, width: 50, height: 50)
-
+                
             }
             
-             self.buttonMenu.removeFromSuperview()
+            self.buttonMenu.removeFromSuperview()
             self.buttonMenu1.removeFromSuperview()
         }
         
@@ -93,8 +93,8 @@ class IconLauncher: NSObject{
     
     override init (){
         super.init()
-
-
+        
+        
         
         
     }

@@ -32,10 +32,10 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     let cellId = "cellId"
     let cellHeight: CGFloat = 50
-
+    
     let settings: [Setting] = {
         
-        return [Setting(name: "Einstellung", imageName: "ic_settings_36pt"), Setting(name: "Datenschutz-Bestimmungen", imageName: "ic_lock_36pt"),Setting(name: "Feedback", imageName: "ic_feedback_36pt"),Setting(name: "Hilfe", imageName: "ic_help_36pt"),Setting(name: "Profil", imageName: "ic_account_circle_36pt"),Setting(name: "abbrechen", imageName: "ic_cancel_36pt")]
+        return [Setting(name: "Einstellungen", imageName: "ic_settings_36pt"), Setting(name: "Datenschutz-Bestimmungen", imageName: "ic_lock_36pt"),Setting(name: "Feedback", imageName: "ic_feedback_36pt"),Setting(name: "Hilfe", imageName: "ic_help_36pt"),Setting(name: "Profil", imageName: "ic_account_circle_36pt"),Setting(name: "abbrechen", imageName: "ic_cancel_36pt")]
     }()
     
     var homeController: ViewController?
@@ -49,7 +49,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
-
+            
             window.addSubview(blackView)
             window.addSubview(collectionView)
             
@@ -69,7 +69,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 self.collectionView.frame = CGRect(x: 0, y: y, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
                 
             } , completion: nil)
-
+            
         }
         
         
@@ -119,20 +119,20 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let setting = self.settings[indexPath.item]
-
+        
         handleDismiss(setting: setting)
         
     }
     
     
     override init (){
-    super.init()
-
+        super.init()
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
         collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
-
+        
         
     }
 }

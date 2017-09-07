@@ -12,6 +12,7 @@
 		F508F0801F5C39380099E17E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07F1F5C39380099E17E /* Extensions.swift */; };
 		F518D7DB1F4E25A800E619E6 /* IconLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518D7DA1F4E25A800E619E6 /* IconLauncher.swift */; };
 		F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F33B41F2AC4A300E990DD /* renderScrollView.swift */; };
+		F56E711F1F61E69400127A35 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E711E1F61E69400127A35 /* SidebarViewController.swift */; };
 		F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E51F33F01700CFA7D3 /* MinusButton.swift */; };
 		F57181E81F33F17500CFA7D3 /* DivideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E71F33F17500CFA7D3 /* DivideButton.swift */; };
 		F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E91F33F21000CFA7D3 /* MultiplicationButton.swift */; };
@@ -51,6 +52,7 @@
 		F508F07F1F5C39380099E17E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F518D7DA1F4E25A800E619E6 /* IconLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconLauncher.swift; sourceTree = "<group>"; };
 		F51F33B41F2AC4A300E990DD /* renderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = renderScrollView.swift; sourceTree = "<group>"; };
+		F56E711E1F61E69400127A35 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		F57181E51F33F01700CFA7D3 /* MinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
 		F57181E71F33F17500CFA7D3 /* DivideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideButton.swift; sourceTree = "<group>"; };
 		F57181E91F33F21000CFA7D3 /* MultiplicationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationButton.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				F508F07B1F5C34880099E17E /* BaseCell.swift */,
 				F508F07D1F5C36B20099E17E /* SettingCell.swift */,
 				F508F07F1F5C39380099E17E /* Extensions.swift */,
+				F56E711E1F61E69400127A35 /* SidebarViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				F5D1A4851F198EE20052420D /* ViewController.swift in Sources */,
 				F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */,
 				F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */,
+				F56E711F1F61E69400127A35 /* SidebarViewController.swift in Sources */,
 				F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */,
 				F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */,
 				F57181E81F33F17500CFA7D3 /* DivideButton.swift in Sources */,
