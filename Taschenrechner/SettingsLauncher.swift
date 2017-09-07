@@ -35,9 +35,10 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
 
     let settings: [Setting] = {
         
-        
-        return [Setting(name: "Test0", imageName: "ic_accessibility_36pt"), Setting(name: "Test1", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test2", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test3", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test4", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test5", imageName: "ic_3d_rotation_36pt")]
+        return [Setting(name: "Test0", imageName: "ic_accessibility_36pt"), Setting(name: "Test1", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test2", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test3", imageName: "ic_3d_rotation_36pt"),Setting(name: "Test4", imageName: "ic_3d_rotation_36pt"),Setting(name: "Cancel", imageName: "ic_3d_rotation_36pt")]
     }()
+    
+    var homeController: ViewController?
     
     //show menu
     func showSettings(){
@@ -75,14 +76,23 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     }
     
     //dissmiss if click on the blackView
-    func handleDismiss() {
+    func handleDismiss(setting: Setting) {
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
                 self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
             }
+            
+        }) { (completed: Bool) in
+            
+            if setting.name != "" && setting.name != "Cancel"{
+                
+                self.homeController?.showControllerForSetting(setting: setting)
+                
+            }
+            
         }
         
     }
@@ -105,6 +115,13 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: collectionView.frame.width, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let setting = self.settings[indexPath.item]
+
+        handleDismiss(setting: setting)
+        
     }
     
     
