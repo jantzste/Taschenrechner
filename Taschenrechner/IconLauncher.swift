@@ -94,9 +94,6 @@ class IconLauncher: NSObject{
     override init (){
         super.init()
         
-        
-        
-        
     }
 }
 

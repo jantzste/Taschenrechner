@@ -21,12 +21,22 @@ class ViewController: UIViewController {
         
         setScrollView()
         
-        firstIconButton()
+        //firstIconButton()
         
         setTitel()
         
         
     }
+    
+    let cameraButton: UIButton = {
+        let button = UIButton()
+        
+        let buttoBackground = UIImage(named: "ic_photo_camera_36pt") as UIImage?
+        button.setImage(buttoBackground, for: .normal)
+        
+        return button
+    }()
+    
     
     let buttonMenu1: UIButton = {
         

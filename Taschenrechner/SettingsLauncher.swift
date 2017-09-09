@@ -18,7 +18,7 @@ class Setting: NSObject{
     }
 }
 
-class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     let blackView = UIView()
@@ -39,6 +39,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     }()
     
     var homeController: ViewController?
+    
+    var homeScreenController: TabBarViewController?
     
     //show menu
     func showSettings(){
@@ -89,7 +91,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
             if setting.name != "" && setting.name != "abbrechen"{
                 
-                self.homeController?.showControllerForSetting(setting: setting)
+                //self.homeController?.showControllerForSetting(setting: setting)
+                self.homeScreenController?.showControllerForSetting(setting: setting)
                 
             }
             
