@@ -27,6 +27,7 @@
 		F5D1A4981F198EE20052420D /* TaschenrechnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4971F198EE20052420D /* TaschenrechnerTests.swift */; };
 		F5D1A4A31F198EE20052420D /* TaschenrechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4A21F198EE20052420D /* TaschenrechnerUITests.swift */; };
 		F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4B41F1991620052420D /* MenuViewController.swift */; };
+		F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F5D1A4A21F198EE20052420D /* TaschenrechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaschenrechnerUITests.swift; sourceTree = "<group>"; };
 		F5D1A4A41F198EE20052420D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D1A4B41F1991620052420D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +157,9 @@
 				F5D1A4B41F1991620052420D /* MenuViewController.swift */,
 				F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */,
 				F518D7DA1F4E25A800E619E6 /* IconLauncher.swift */,
-				F508F07B1F5C34880099E17E /* BaseCell.swift */,
-				F508F07D1F5C36B20099E17E /* SettingCell.swift */,
 				F508F07F1F5C39380099E17E /* Extensions.swift */,
 				F56E711E1F61E69400127A35 /* SidebarViewController.swift */,
+				F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -188,6 +189,7 @@
 			children = (
 				F51F33B81F2AC86C00E990DD /* Main */,
 				F58B65BC1F4CD68B005A1420 /* Controller */,
+				F5DC6DCF1F63FDAC00628824 /* Cell */,
 				F51F33B71F2AC84500E990DD /* ScrollView */,
 				F51F33B61F2AC83B00E990DD /* Button */,
 			);
@@ -210,6 +212,15 @@
 				F5D1A4A41F198EE20052420D /* Info.plist */,
 			);
 			path = TaschenrechnerUITests;
+			sourceTree = "<group>";
+		};
+		F5DC6DCF1F63FDAC00628824 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F508F07B1F5C34880099E17E /* BaseCell.swift */,
+				F508F07D1F5C36B20099E17E /* SettingCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */,
 				F57181EE1F33F42A00CFA7D3 /* PlusButton.swift in Sources */,
 				F58B65BE1F4CD6A4005A1420 /* SettingsLauncher.swift in Sources */,
 				F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */,

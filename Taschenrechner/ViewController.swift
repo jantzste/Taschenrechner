@@ -12,11 +12,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        super.viewWillAppear(animated)
-    
-    //    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +24,7 @@ class ViewController: UIViewController {
         firstIconButton()
         
         setTitel()
+        
         
     }
     
@@ -41,7 +38,7 @@ class ViewController: UIViewController {
         
         return buttonG1
     }()
-    
+
     
     func setNaviBar(){
         
