@@ -12,30 +12,67 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNaviBar()
         
-        setScrollView()
+        //addScrollView()
         
         //firstIconButton()
         
-        setTitel()
+        addTitelAndBackground()
         
+        createCamerButton()
         
     }
     
-    let cameraButton: UIButton = {
-        let button = UIButton()
+    //add the cameraButton
+    func createCamerButton() -> UIButton{
         
-        let buttoBackground = UIImage(named: "ic_photo_camera_36pt") as UIImage?
-        button.setImage(buttoBackground, for: .normal)
+        let btn: UIButton = UIButton(frame: CGRect(x: 320, y: 540, width: 70, height: 70))
+        //make the button circle
+        btn.layer.cornerRadius = 0.5 * btn.bounds.size.width
+        btn.layer.borderWidth = 2.0
         
-        return button
+        btn.backgroundColor = UIColor.lightGray
+        btn.clipsToBounds = true
+        btn.addTarget(self, action: #selector(openCamera), for: .touchUpInside)
+        btn.tag = 1
+        
+        let btnBackground = UIImage(named: "ic_photo_camera_36pt") as UIImage?
+        btn.setImage(btnBackground, for: .normal)
+        
+        
+        self.view.addSubview(btn)
+        
+        return btn
+    }
+    
+    //to scan the QR code
+    func openCamera(){
+        
+        
+        
+    
+    }
+    
+    //add background image for the info
+    
+    let backgroundImageView: UIImageView = {
+        let pictureView = UIImageView()
+        pictureView.image = UIImage(named: "QRCode")
+        pictureView.frame = CGRect(x: 0, y: 0, width: 400, height: 800)
+        pictureView.contentMode = UIViewContentMode.scaleAspectFit
+        
+        
+        //pictureView.translatesAutoresizingMaskIntoConstraints = false
+        return pictureView
     }()
+    
+    
     
     
     let buttonMenu1: UIButton = {
@@ -48,7 +85,7 @@ class ViewController: UIViewController {
         
         return buttonG1
     }()
-
+    
     
     func setNaviBar(){
         
@@ -100,7 +137,7 @@ class ViewController: UIViewController {
     }
     
     //add the cardView
-    func setScrollView(){
+    func addScrollView(){
         let scrollViewController = renderScrollView()
         let scrollView = scrollViewController
         self.view.addSubview(scrollView.scrollView())
@@ -108,7 +145,7 @@ class ViewController: UIViewController {
     }
     
     //add a title above of the scrollView
-    func setTitel(){
+    func addTitelAndBackground(){
         let titel = UILabel(frame: CGRect(x: 12, y: 20, width: 200, height: 21))
         titel.textAlignment = .left
         titel.text = "Homescreen"
@@ -116,6 +153,7 @@ class ViewController: UIViewController {
         titel.font = titel.font.withSize(20)
         
         self.view.addSubview(titel)
+        self.view.addSubview(backgroundImageView)
         
     }
     

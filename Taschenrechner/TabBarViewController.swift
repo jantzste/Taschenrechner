@@ -88,9 +88,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     func renderTabBar(){
         
-        //Create Tab one
+        //Create Tab home
         let tabOne = ViewController()
-        let tabOneBarItem = UITabBarItem(title: "Tab1", image: UIImage(named: "ic_settings_36pt"), selectedImage: UIImage(named: ""))
+        let tabOneBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_36pt"), selectedImage: UIImage(named: ""))
         
         tabOne.tabBarItem = tabOneBarItem
         
