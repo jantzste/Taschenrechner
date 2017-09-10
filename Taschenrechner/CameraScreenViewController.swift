@@ -23,7 +23,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
     
     let cameraImage: UIImageView = {
     let backroungImage = UIImageView()
-        backroungImage.image = UIImage(named:"QRCode")
+        backroungImage.image = UIImage(named:"QRCode Rectangle")
         backroungImage.frame = CGRect(x: 40, y: 100, width: 300, height: 400)
         backroungImage.contentMode = UIViewContentMode.scaleAspectFit
         
