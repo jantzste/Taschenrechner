@@ -17,8 +17,8 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         renderCamera()
+        
     }
     
     let cameraImage: UIImageView = {
