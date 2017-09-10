@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     //add the cameraButton
     func createCamerButton() -> UIButton{
         
-        let btn: UIButton = UIButton(frame: CGRect(x: 300, y: 440, width: 70, height: 70))
+        let btn: UIButton = UIButton(frame: CGRect(x: 280, y: 460, width: 70, height: 70))
         //make the button circle
         btn.layer.cornerRadius = 0.5 * btn.bounds.size.width
         btn.layer.borderWidth = 2.0
@@ -54,7 +54,8 @@ class ViewController: UIViewController {
     //to scan the QR code
     func openCamera(){
         let cameraButton = CameraScreenViewController()
-        present(bhcameraButton, animated: true, completion: nil)
+       present(cameraButton, animated: true, completion: nil)
+ 
     }
     
     //add background image for the info

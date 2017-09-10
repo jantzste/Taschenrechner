@@ -31,6 +31,37 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         
     }()
     
+    let homeButton: UIButton = {
+    let button = UIButton()
+        button.addTarget(self, action: #selector(leaveButton), for: .touchUpInside)
+        button.frame = CGRect(x: 270, y: 580, width: 70, height: 70)
+        button.backgroundColor = UIColor.blue
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        
+        button.layer.borderWidth = 2.0
+        
+        button.backgroundColor = UIColor.lightGray
+        button.clipsToBounds = true
+
+        
+        let btnBackground = UIImage(named: "ic_home_36pt") as UIImage?
+        button.setImage(btnBackground, for: .normal)
+        
+        
+        
+    return button
+    }()
+    
+    //go back to the homescreen
+    func leaveButton(){
+        let homescreen = ViewController()
+        
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         if metadataObjects != nil && metadataObjects.count != 0 {
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
@@ -75,6 +106,8 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         video = AVCaptureVideoPreviewLayer(session: session)
         video.frame = view.layer.bounds
         view.layer.addSublayer(video)
+        
+        self.view.addSubview(homeButton)
         
         self.view.addSubview(cameraImage)
         
