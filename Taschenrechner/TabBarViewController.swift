@@ -70,7 +70,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     func showControllerForSetting(setting: Setting){
         let dummySettingsViewController = UIViewController()
         dummySettingsViewController.view.backgroundColor = UIColor.white
-        dummySettingsViewController.navigationItem.title = setting.name
+        dummySettingsViewController.navigationItem.title = setting.name.rawValue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.pushViewController(dummySettingsViewController, animated: true)
     }
@@ -103,6 +103,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let arrayController = [tabOne,tabTwo]
         
         self.viewControllers = arrayController
+        
+        
+        UITabBar.appearance().tintColor = UIColor.black
         
         
     }

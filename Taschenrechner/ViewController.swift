@@ -64,9 +64,9 @@ class ViewController: UIViewController {
     let backgroundImageView: UIImageView = {
         let pictureView = UIImageView()
         pictureView.image = UIImage(named: "QRCode")
-        pictureView.frame = CGRect(x: 0, y: 0, width: 400, height: 800)
+        pictureView.frame = CGRect(x: 100, y: 200, width: 200, height: 200)
+
         pictureView.contentMode = UIViewContentMode.scaleAspectFit
-        
         
         //pictureView.translatesAutoresizingMaskIntoConstraints = false
         return pictureView
@@ -125,7 +125,7 @@ class ViewController: UIViewController {
     func showControllerForSetting(setting: Setting){
         let dummySettingsViewController = UIViewController()
         dummySettingsViewController.view.backgroundColor = UIColor.white
-        dummySettingsViewController.navigationItem.title = setting.name
+        dummySettingsViewController.navigationItem.title = setting.name.rawValue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.pushViewController(dummySettingsViewController, animated: true)
     }

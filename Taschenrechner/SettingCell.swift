@@ -22,7 +22,8 @@ class SettingCell: BaseCell{
     
     var setting: Setting? {
         didSet{
-            nameLabel.text = setting?.name
+            //with rawValue you get the Stringvalue
+            nameLabel.text = setting?.name.rawValue
             
             if let imageName = setting?.imageName {
                 

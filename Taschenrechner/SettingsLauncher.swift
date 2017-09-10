@@ -9,13 +9,22 @@
 import UIKit
 
 class Setting: NSObject{
-    let name: String
+    let name: SettingName
     let imageName: String
     
-    init(name:String, imageName:String){
+    init(name:SettingName, imageName:String){
         self.name = name
         self.imageName = imageName
     }
+}
+//use enum to make to code more bug free
+enum SettingName: String{
+    case Cancel = "abbrechen"
+    case Settings = "Einstellungen"
+    case TermsPrivacy = "Datenschutz-Bestimmungen"
+    case SendFeedback = "Feedback"
+    case Help = "Hilfe"
+    case Account = "Profil"
 }
 
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -35,7 +44,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     let settings: [Setting] = {
         
-        return [Setting(name: "Einstellungen", imageName: "ic_settings_36pt"), Setting(name: "Datenschutz-Bestimmungen", imageName: "ic_lock_36pt"),Setting(name: "Feedback", imageName: "ic_feedback_36pt"),Setting(name: "Hilfe", imageName: "ic_help_36pt"),Setting(name: "Profil", imageName: "ic_account_circle_36pt"),Setting(name: "abbrechen", imageName: "ic_cancel_36pt")]
+        return [Setting(name:.Settings, imageName:"ic_settings_36pt"), Setting(name: .TermsPrivacy, imageName: "ic_lock_36pt"),Setting(name: .SendFeedback, imageName: "ic_feedback_36pt"),Setting(name: .Help, imageName: "ic_help_36pt"),Setting(name: .Account, imageName: "ic_account_circle_36pt"), Setting(name: .Cancel, imageName:"ic_account_circle_36pt")]
     }()
     
     var homeController: ViewController?
@@ -89,7 +98,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
         }) { (completed: Bool) in
             
-            if setting.name != "" && setting.name != "abbrechen"{
+            if setting.name != .Cancel{
                 
                 //self.homeController?.showControllerForSetting(setting: setting)
                 self.homeScreenController?.showControllerForSetting(setting: setting)
