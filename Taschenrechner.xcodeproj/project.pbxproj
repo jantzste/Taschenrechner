@@ -18,6 +18,7 @@
 		F57181EC1F33F2F800CFA7D3 /* FinalResultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181EB1F33F2F800CFA7D3 /* FinalResultButton.swift */; };
 		F57181EE1F33F42A00CFA7D3 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181ED1F33F42A00CFA7D3 /* PlusButton.swift */; };
 		F58B65BE1F4CD6A4005A1420 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */; };
+		F5A8C8751F656A4500310F85 /* CameraScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */; };
 		F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4821F198EE20052420D /* AppDelegate.swift */; };
 		F5D1A4851F198EE20052420D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4841F198EE20052420D /* ViewController.swift */; };
 		F5D1A4881F198EE20052420D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D1A4861F198EE20052420D /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		F57181EB1F33F2F800CFA7D3 /* FinalResultButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalResultButton.swift; sourceTree = "<group>"; };
 		F57181ED1F33F42A00CFA7D3 /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScreenViewController.swift; sourceTree = "<group>"; };
 		F5D1A47F1F198EE20052420D /* Taschenrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taschenrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D1A4821F198EE20052420D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D1A4841F198EE20052420D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				F508F07F1F5C39380099E17E /* Extensions.swift */,
 				F56E711E1F61E69400127A35 /* SidebarViewController.swift */,
 				F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */,
+				F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */,
 				F508F07E1F5C36B20099E17E /* SettingCell.swift in Sources */,
 				F508F07C1F5C34880099E17E /* BaseCell.swift in Sources */,
+				F5A8C8751F656A4500310F85 /* CameraScreenViewController.swift in Sources */,
 				F57181EC1F33F2F800CFA7D3 /* FinalResultButton.swift in Sources */,
 				F5D1A4851F198EE20052420D /* ViewController.swift in Sources */,
 				F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */,
@@ -519,6 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6DCARNPCB7;
 				INFOPLIST_FILE = Taschenrechner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jantzste.Taschenrechner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6DCARNPCB7;
 				INFOPLIST_FILE = Taschenrechner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jantzste.Taschenrechner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
