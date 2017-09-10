@@ -80,12 +80,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let menuController = MenuViewController()
         navigationController?.pushViewController(menuController, animated: false)
     }
-    
-    
-    
-    
-    
-    
+
     func renderTabBar(){
         
         //Create Tab home

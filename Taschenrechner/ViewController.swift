@@ -21,8 +21,6 @@ class ViewController: UIViewController {
         
         //addScrollView()
         
-        //firstIconButton()
-        
         addTitelAndBackground()
         
         createCamerButton()
@@ -71,22 +69,7 @@ class ViewController: UIViewController {
         //pictureView.translatesAutoresizingMaskIntoConstraints = false
         return pictureView
     }()
-    
-    
-    
-    
-    let buttonMenu1: UIButton = {
-        
-        let buttonG1 = UIButton()
-        buttonG1.backgroundColor = UIColor.red
-        
-        let backgroundimage1 = UIImage(named: "ic_3d_rotation_36pt") as UIImage?
-        buttonG1.setImage(backgroundimage1, for: .normal)
-        
-        return buttonG1
-    }()
-    
-    
+ 
     func setNaviBar(){
         
         
@@ -156,31 +139,6 @@ class ViewController: UIViewController {
         self.view.addSubview(backgroundImageView)
         
     }
-    
-    
-    //add the iconButton
-    func firstIconButton () -> UIButton{
-        
-        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 480, width: 80, height: 50))
-        btn.backgroundColor = UIColor.blue
-        btn.setTitle("Test", for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.addTarget(self, action: #selector(iconButtonAction), for: .touchUpInside)
-        btn.tag = 1
-        
-        self.view.addSubview(btn)
-        
-        return btn
-    }
-    
-    //show iconMenu
-    let iconLauncher = IconLauncher()
-    
-    func iconButtonAction(sender: UIButton!){
-        iconLauncher.showSettings()
-        
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
