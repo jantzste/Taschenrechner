@@ -21,6 +21,18 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         
     }
     
+    
+    let infoText: UILabel = {
+        let infoLabl = UILabel()
+        infoLabl.text = "Bitte scannen Sie den Barcode ab"
+        infoLabl.textColor = UIColor.white
+        infoLabl.font = infoLabl.font.withSize(20)
+        infoLabl.frame = CGRect(x: 35, y: 100, width: 100, height: 100)
+        //infoLabl.backgroundColor = UIColor.lightGray
+        infoLabl.sizeToFit()
+        return infoLabl
+    }()
+    
     let cameraImage: UIImageView = {
     let backroungImage = UIImageView()
         backroungImage.image = UIImage(named:"QRCode Rectangle")
@@ -106,6 +118,8 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         video = AVCaptureVideoPreviewLayer(session: session)
         video.frame = view.layer.bounds
         view.layer.addSublayer(video)
+        
+        self.view.addSubview(infoText)
         
         self.view.addSubview(homeButton)
         

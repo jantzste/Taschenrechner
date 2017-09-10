@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         setNaviBar()
         
-        addScrollView()
+        //addScrollView()
         
         addTitelAndBackground()
         
@@ -137,7 +137,7 @@ class ViewController: UIViewController {
         titel.font = titel.font.withSize(20)
         
         self.view.addSubview(titel)
-        self.view.addSubview(backgroundImageView)
+        //self.view.addSubview(backgroundImageView)
         
     }
     
