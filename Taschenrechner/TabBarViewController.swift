@@ -29,11 +29,14 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     func setNaviBar(){
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_more_horiz_36pt"), style: .plain, target: self, action: #selector(handleMore))
+        
+        
         
         //create left NavigationButton
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handelMenu))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handleMore))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handleMore))
         
         //set the color
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -43,7 +46,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         //set the navigation title
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationItem.title = "Homescreen"
+        self.navigationItem.title = "Home"
         
         //set backgroundColor of homescreen to white
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -83,22 +86,22 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     func renderTabBar(){
         
-        //Create Tab home
-        let tabOne = ViewController()
-        let tabOneBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_36pt"), selectedImage: UIImage(named: ""))
+        //Create the tabs
+        let tabHome = ViewController()
+        let tabHomeBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_36pt"), selectedImage: UIImage(named: ""))
+        tabHome.tabBarItem = tabHomeBarItem
         
-        tabOne.tabBarItem = tabOneBarItem
+        let tabCamera = CameraScreenViewController()
+        let tabCameraBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "ic_photo_camera_36pt"), selectedImage: UIImage(named: ""))
+        tabCamera.tabBarItem =  tabCameraBarItem
         
-        //Create Tab two
         let tabTwo = renderScrollView()
         let tabTwoBarItem = UITabBarItem(title: "Tab2", image: UIImage(named: "ic_lock_36pt"), selectedImage: UIImage(named: ""))
-        
         tabTwo.tabBarItem = tabTwoBarItem
         
-        let arrayController = [tabOne,tabTwo]
+        let arrayController = [tabHome,tabCamera, tabTwo]
         
         self.viewControllers = arrayController
-        
         
         UITabBar.appearance().tintColor = UIColor.black
         

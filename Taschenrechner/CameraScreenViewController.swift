@@ -17,7 +17,10 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        renderCamera()
+        useCamera()
+        
+        //For testing after that can be deleted
+        self.title = "Camerascreen"
         
     }
     
@@ -34,7 +37,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
     }()
     
     let cameraImage: UIImageView = {
-    let backroungImage = UIImageView()
+        let backroungImage = UIImageView()
         backroungImage.image = UIImage(named:"QRCode Rectangle")
         backroungImage.frame = CGRect(x: 40, y: 100, width: 300, height: 400)
         backroungImage.contentMode = UIViewContentMode.scaleAspectFit
@@ -44,7 +47,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
     }()
     
     let homeButton: UIButton = {
-    let button = UIButton()
+        let button = UIButton()
         button.addTarget(self, action: #selector(leaveButton), for: .touchUpInside)
         button.frame = CGRect(x: 270, y: 580, width: 70, height: 70)
         button.backgroundColor = UIColor.blue
@@ -54,14 +57,14 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         
         button.backgroundColor = UIColor.lightGray
         button.clipsToBounds = true
-
+        
         
         let btnBackground = UIImage(named: "ic_home_36pt") as UIImage?
         button.setImage(btnBackground, for: .normal)
         
         
         
-    return button
+        return button
     }()
     
     //go back to the homescreen
@@ -92,7 +95,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         }
     }
     
-    func renderCamera(){
+    func useCamera(){
         
         //creating session
         let session = AVCaptureSession()

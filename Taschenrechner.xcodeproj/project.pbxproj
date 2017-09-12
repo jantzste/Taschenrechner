@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50129861F689ACB002F9D79 /* addNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50129851F689ACB002F9D79 /* addNaviBar.swift */; };
 		F508F07C1F5C34880099E17E /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07B1F5C34880099E17E /* BaseCell.swift */; };
 		F508F07E1F5C36B20099E17E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07D1F5C36B20099E17E /* SettingCell.swift */; };
 		F508F0801F5C39380099E17E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07F1F5C39380099E17E /* Extensions.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F50129851F689ACB002F9D79 /* addNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNaviBar.swift; sourceTree = "<group>"; };
 		F508F07B1F5C34880099E17E /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		F508F07D1F5C36B20099E17E /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F508F07F1F5C39380099E17E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				F56E711E1F61E69400127A35 /* SidebarViewController.swift */,
 				F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */,
 				F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */,
+				F50129851F689ACB002F9D79 /* addNaviBar.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */,
+				F50129861F689ACB002F9D79 /* addNaviBar.swift in Sources */,
 				F57181EE1F33F42A00CFA7D3 /* PlusButton.swift in Sources */,
 				F58B65BE1F4CD6A4005A1420 /* SettingsLauncher.swift in Sources */,
 				F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */,
