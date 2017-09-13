@@ -12,6 +12,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setNaviBar()
         
         setScrollView()
@@ -33,7 +34,7 @@ class MenuViewController: UIViewController {
     func setTitel(){
         let titel = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 21))
         titel.textAlignment = .left
-        titel.text = "Verlauf"
+        //titel.text = "Verlauf"
         titel.textColor = UIColor.black
         titel.font = titel.font.withSize(20)
         
@@ -45,7 +46,8 @@ class MenuViewController: UIViewController {
     
     //add the navigationBar
     func setNaviBar(){
-        view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+       view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        
         //make the screenSize automatically
         let screenSize: CGRect = UIScreen.main.bounds
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width , height: 0))

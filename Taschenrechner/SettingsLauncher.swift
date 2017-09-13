@@ -29,7 +29,6 @@ enum SettingName: String{
 
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    
     let blackView = UIView()
     
     let collectionView: UICollectionView = {
@@ -47,9 +46,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         return [Setting(name:.Settings, imageName:"ic_settings_36pt"), Setting(name: .TermsPrivacy, imageName: "ic_lock_36pt"),Setting(name: .SendFeedback, imageName: "ic_feedback_36pt"),Setting(name: .Help, imageName: "ic_help_36pt"),Setting(name: .Account, imageName: "ic_account_circle_36pt"), Setting(name: .Cancel, imageName:"ic_account_circle_36pt")]
     }()
     
-    var homeController: addNaviBar?
     
-//     var homeController: ViewController?
+    var homeController: ViewController?
     
     var homeScreenController: TabBarViewController?
     
