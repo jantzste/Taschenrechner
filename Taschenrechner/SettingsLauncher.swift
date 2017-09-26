@@ -50,7 +50,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     var homeController: ViewController?
     
     var homeScreenController: TabBarViewController?
-    
+ 
     //show menu
     func showSettings(){
         
@@ -83,8 +83,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
         }
         
-        
     }
+
     
     //dissmiss if click on the blackView
     func handleDismiss(setting: Setting) {
@@ -99,8 +99,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         }) { (completed: Bool) in
             
             if setting.name != .Cancel{
-                
-                //self.homeController?.showControllerForSetting(setting: setting)
+            
                 self.homeScreenController?.showControllerForSetting(setting: setting)
                 
             }
@@ -144,7 +143,6 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         collectionView.delegate = self
         
         collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
-        
         
     }
 }

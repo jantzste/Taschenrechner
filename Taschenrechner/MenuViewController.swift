@@ -18,8 +18,7 @@ class MenuViewController: UIViewController {
         setScrollView()
         
         setTitel()
-        
-        
+ 
     }
     
     func setScrollView(){
@@ -34,7 +33,7 @@ class MenuViewController: UIViewController {
     func setTitel(){
         let titel = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 21))
         titel.textAlignment = .left
-        //titel.text = "Verlauf"
+        titel.text = "Verlauf"
         titel.textColor = UIColor.black
         titel.font = titel.font.withSize(20)
         

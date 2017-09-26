@@ -23,7 +23,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         self.title = "Camerascreen"
         
     }
-
+    
     
     let infoText: UILabel = {
         let infoLabl = UILabel()
@@ -53,7 +53,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
                 if object.type == AVMetadataObjectTypeQRCode {
                     
                     let alert = UIAlertController(title: "QR Code", message: object.stringValue, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "Save", style: .default, handler: nil))
                     alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: {(nil) in
                         UIPasteboard.general.string = object.stringValue
                     }))
@@ -92,13 +92,18 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         view.layer.addSublayer(video)
         
         self.view.addSubview(infoText)
-                
+        
         self.view.addSubview(cameraImage)
         
         self.view.bringSubview(toFront: cameraImage)
         
         session.startRunning()
         
+
+        
     }
-    
+
 }
+
+
+

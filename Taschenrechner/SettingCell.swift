@@ -56,9 +56,7 @@ class SettingCell: BaseCell{
     
     override func setupViews(){
         super.setupViews()
-        
-        // backgroundColor = UIColor.blue
-        
+                
         addSubview(nameLabel)
         addSubview(iconImageView)
         
@@ -67,8 +65,6 @@ class SettingCell: BaseCell{
         addConstraintsWithFormat(format: "V:[v0(30)]", views: iconImageView)
         
         addConstraints([NSLayoutConstraint(item: iconImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
-        
-        
         
     }
     

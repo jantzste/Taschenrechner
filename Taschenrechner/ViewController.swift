@@ -13,8 +13,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    
-    
+  
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +26,9 @@ class ViewController: UIViewController {
 
         //For testing after that can be deleted
         self.title = "Homescreen"
+        
     }
+    
     
     //add background image for the info
     
@@ -86,6 +88,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     
 }
 

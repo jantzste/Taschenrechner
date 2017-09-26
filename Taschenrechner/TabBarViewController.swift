@@ -8,16 +8,20 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SideBarDelegate {
     
     
+    var sidebar:SideBar = SideBar()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
 
         setNaviBar()
-        
+
+    sidebarMenu()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,11 +29,15 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
         renderTabBar()
     }
+
+    override var prefersStatusBarHidden: Bool{
+        return UIApplication.shared.statusBarOrientation.isLandscape
+    }
+    
     
     
     func setNaviBar(){
-        
-        
+   
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_more_horiz_36pt"), style: .plain, target: self, action: #selector(handleMore))
 
         //create left NavigationButton
@@ -60,11 +68,34 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         settingsLauncher.showSettings()
     }
     
+
+    
+    //sidebar action if select one item
+    func SideBarDidSelectButtonAtIndex(_ index: Int) {
+        
+    }
+    
+    
+    func sidebarMenu(){
+        sidebar = SideBar(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
+        sidebar.delegate = self
+    }
+    
     
     
     func handelMenu(){
-        let menuController = MenuViewController()
-        navigationController?.pushViewController(menuController, animated: false)
+        
+        let didshow = 0
+        
+        if didshow == 0 {
+          sidebar.showSideBar(true)
+        } else{
+            didshow-1
+        }
+        
+
+//        let menuController = MenuViewController()
+//        navigationController?.pushViewController(menuController, animated: false)
     }
 
     

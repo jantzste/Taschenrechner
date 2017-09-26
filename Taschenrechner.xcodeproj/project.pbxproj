@@ -11,7 +11,6 @@
 		F508F07E1F5C36B20099E17E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07D1F5C36B20099E17E /* SettingCell.swift */; };
 		F508F0801F5C39380099E17E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07F1F5C39380099E17E /* Extensions.swift */; };
 		F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F33B41F2AC4A300E990DD /* renderScrollView.swift */; };
-		F56E711F1F61E69400127A35 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E711E1F61E69400127A35 /* SidebarViewController.swift */; };
 		F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E51F33F01700CFA7D3 /* MinusButton.swift */; };
 		F57181E81F33F17500CFA7D3 /* DivideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E71F33F17500CFA7D3 /* DivideButton.swift */; };
 		F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E91F33F21000CFA7D3 /* MultiplicationButton.swift */; };
@@ -27,7 +26,10 @@
 		F5D1A4A31F198EE20052420D /* TaschenrechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4A21F198EE20052420D /* TaschenrechnerUITests.swift */; };
 		F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4B41F1991620052420D /* MenuViewController.swift */; };
 		F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */; };
+		F5E489391F786CC400CBD785 /* SideBarTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E489381F786CC400CBD785 /* SideBarTableTableViewController.swift */; };
+		F5E4893B1F786D0700CBD785 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4893A1F786D0700CBD785 /* SideBar.swift */; };
 		F5F4BF291F648A2200DED086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F4BF281F648A2200DED086 /* Assets.xcassets */; };
+		F5FC1F321F6ADE870031DA54 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC1F311F6ADE870031DA54 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,6 @@
 		F508F07D1F5C36B20099E17E /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F508F07F1F5C39380099E17E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F51F33B41F2AC4A300E990DD /* renderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = renderScrollView.swift; sourceTree = "<group>"; };
-		F56E711E1F61E69400127A35 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		F57181E51F33F01700CFA7D3 /* MinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
 		F57181E71F33F17500CFA7D3 /* DivideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideButton.swift; sourceTree = "<group>"; };
 		F57181E91F33F21000CFA7D3 /* MultiplicationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationButton.swift; sourceTree = "<group>"; };
@@ -74,7 +75,10 @@
 		F5D1A4A41F198EE20052420D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D1A4B41F1991620052420D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F5E489381F786CC400CBD785 /* SideBarTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableTableViewController.swift; sourceTree = "<group>"; };
+		F5E4893A1F786D0700CBD785 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		F5F4BF281F648A2200DED086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5FC1F311F6ADE870031DA54 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +160,9 @@
 				F5D1A4841F198EE20052420D /* ViewController.swift */,
 				F5D1A4B41F1991620052420D /* MenuViewController.swift */,
 				F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */,
-				F56E711E1F61E69400127A35 /* SidebarViewController.swift */,
 				F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */,
 				F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */,
+				F5FC1F311F6ADE870031DA54 /* CoreDataManager.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 				F51F33B81F2AC86C00E990DD /* Main */,
 				F50129871F68A7C7002F9D79 /* Helper */,
 				F58B65BC1F4CD68B005A1420 /* Controller */,
+				F5E4893C1F7876C400CBD785 /* Sidebar */,
 				F5DC6DCF1F63FDAC00628824 /* Cell */,
 				F51F33B71F2AC84500E990DD /* ScrollView */,
 				F51F33B61F2AC83B00E990DD /* Button */,
@@ -221,6 +226,15 @@
 				F508F07D1F5C36B20099E17E /* SettingCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		F5E4893C1F7876C400CBD785 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				F5E489381F786CC400CBD785 /* SideBarTableTableViewController.swift */,
+				F5E4893A1F786D0700CBD785 /* SideBar.swift */,
+			);
+			name = Sidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,10 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E4893B1F786D0700CBD785 /* SideBar.swift in Sources */,
 				F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */,
 				F57181EE1F33F42A00CFA7D3 /* PlusButton.swift in Sources */,
 				F58B65BE1F4CD6A4005A1420 /* SettingsLauncher.swift in Sources */,
 				F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */,
+				F5FC1F321F6ADE870031DA54 /* CoreDataManager.swift in Sources */,
 				F508F07E1F5C36B20099E17E /* SettingCell.swift in Sources */,
 				F508F07C1F5C34880099E17E /* BaseCell.swift in Sources */,
 				F5A8C8751F656A4500310F85 /* CameraScreenViewController.swift in Sources */,
@@ -371,11 +387,11 @@
 				F5D1A4851F198EE20052420D /* ViewController.swift in Sources */,
 				F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */,
 				F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */,
-				F56E711F1F61E69400127A35 /* SidebarViewController.swift in Sources */,
 				F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */,
 				F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */,
 				F57181E81F33F17500CFA7D3 /* DivideButton.swift in Sources */,
 				F508F0801F5C39380099E17E /* Extensions.swift in Sources */,
+				F5E489391F786CC400CBD785 /* SideBarTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
