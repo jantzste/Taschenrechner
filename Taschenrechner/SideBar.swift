@@ -9,13 +9,17 @@
 
 import UIKit
 @objc protocol SideBarDelegate {
-    func SideBarDidSelectButtonAtIndex(_ index:Int)
-    @objc optional func SideBarWillClose()
-    @objc optional func SideBarWillOpen()
+    func sideBarDidSelectButtonAtIndex(index:Int)
+    @objc optional func sideBarWillClose()
+    @objc optional func sideBarWillOpen()
 }
 class SideBar: NSObject, SideBarTableViewControllerDelegate {
+    func sideBarControlDidSelectRow(_ indexPath: IndexPath) {
+        delegate?.sideBarDidSelectButtonAtIndex(index: indexPath.row)
+
+    }
+    
     let barWidth:CGFloat = 300
-  //  let sideBarTableViewTopInset:CGFloat = 64.0
     let sideBarTableViewTopInset:CGFloat = 64.0
 
     let sideBarContainerView:UIView = UIView()
@@ -62,7 +66,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     func handleSwipe(_ recognizer:UISwipeGestureRecognizer) {
         if recognizer.direction == UISwipeGestureRecognizerDirection.left {
             showSideBar(false)
-            delegate?.SideBarWillClose?()
+            delegate?.sideBarWillClose?()
         } else {
             showSideBar(true)
         }
@@ -86,7 +90,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         SideBarBehavior.elasticity = 0.3
         animator!.addBehavior(SideBarBehavior)
     }
-    func SideBarControlDidSelectRow(_ indexPath: IndexPath) {
-        delegate?.SideBarDidSelectButtonAtIndex(indexPath.row)
-    }
+//    func SideBarControlDidSelectRow(_ indexPath: IndexPath) {
+//        delegate?.SideBarDidSelectButtonAtIndex(indexPath.row)
+//    }
 }

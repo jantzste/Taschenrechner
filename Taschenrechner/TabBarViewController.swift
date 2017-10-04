@@ -8,28 +8,58 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SideBarDelegate {
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SideBarDelegate, SlideMenuDelegate {
+    func sideBarDidSelectButtonAtIndex(index: Int) {
     
+    }
     
-    var sidebar:SideBar = SideBar()
 
+    //var sidebar:SideBar = SideBar()
+    var slideMenu:SlideMenu = SlideMenu()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
-
-        setNaviBar()
-
-    sidebarMenu()
-
+        
+       setNaviBar()
+        
+//       sidebarMenuItems()
+        slideMenuItems()
+ 
+    }
+//
+//    //sidebar1
+//    func sidebarMenuItems(){
+//        sidebar = SideBar(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
+//        sidebar.delegate = self
+//    }
+//
+    //sidebar2
+    func slideMenuItems(){
+        slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
+        slideMenu.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    func slideMenuDidSelectButtonAtIndex(index: Int) {
         
-        renderTabBar()
     }
 
+    
+//    func sideBarDidSelectButtonAtIndex(index: Int) {
+//        
+//    }
+//    
+
+ 
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)        
+        renderTabBar()
+    }
+    
     override var prefersStatusBarHidden: Bool{
         return UIApplication.shared.statusBarOrientation.isLandscape
     }
@@ -37,9 +67,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
     
     
     func setNaviBar(){
-   
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_more_horiz_36pt"), style: .plain, target: self, action: #selector(handleMore))
-
+        
         //create left NavigationButton
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handelMenu))
         
@@ -48,8 +78,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         //set the color
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-
+        
         self.navigationItem.title = "Home"
+        
 
     }
     
@@ -58,46 +89,21 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         let launcher = SettingsLauncher()
         
         launcher.homeScreenController = self
-
+        
         return launcher
     }()
     
     func handleMore(){
-        
         //show menu
         settingsLauncher.showSettings()
     }
-    
 
-    
-    //sidebar action if select one item
-    func SideBarDidSelectButtonAtIndex(_ index: Int) {
-        
-    }
-    
-    
-    func sidebarMenu(){
-        sidebar = SideBar(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
-        sidebar.delegate = self
-    }
-    
-    
     
     func handelMenu(){
-        
-        let didshow = 0
-        
-        if didshow == 0 {
-          sidebar.showSideBar(true)
-        } else{
-            didshow-1
-        }
-        
 
-//        let menuController = MenuViewController()
-//        navigationController?.pushViewController(menuController, animated: false)
+
     }
-
+    
     
     func showControllerForSetting(setting: Setting){
         let dummySettingsViewController = UIViewController()
@@ -106,7 +112,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.pushViewController(dummySettingsViewController, animated: true)
     }
-
+    
     func renderTabBar(){
         
         //Create the tabs
@@ -127,8 +133,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         self.viewControllers = arrayController
         
         UITabBar.appearance().tintColor = UIColor.black
-        
-        
+ 
     }
     
     //UITabBarControllerDelegate method
@@ -138,3 +143,4 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         
     }
 }
+

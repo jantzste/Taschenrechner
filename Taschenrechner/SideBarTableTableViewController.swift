@@ -7,7 +7,7 @@
 //
 import UIKit
 protocol SideBarTableViewControllerDelegate {
-    func SideBarControlDidSelectRow(_ indexPath: IndexPath)
+    func sideBarControlDidSelectRow(_ indexPath: IndexPath)
     
 }
 
@@ -57,6 +57,6 @@ class SideBarTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.SideBarControlDidSelectRow(indexPath)
+        delegate?.sideBarControlDidSelectRow(indexPath)
     }
 }
