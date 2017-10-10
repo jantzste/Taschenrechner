@@ -75,6 +75,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         sideMenuTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
         sideMenuTableViewController.tableView.reloadData()
         sideMenuTableViewController.tableView.layer.borderWidth = 1
+        //sideMenuTableViewController.tableView.layer.borderColor = UIColor.init(r: 0, g: 0, b: 0)
         
         sideBarContainerView.addSubview(blurView)
         sideBarContainerView.addSubview(sideMenuTableViewController.tableView)
@@ -99,7 +100,8 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         animator.removeAllBehaviors()
         isSideBarOpen = shouldOpen
         
-        let gravityX:CGFloat = (shouldOpen) ? 0.5: -0.5
+       // let gravityX:CGFloat = (shouldOpen) ? 0.5: -0.5
+        let gravityX:CGFloat = (shouldOpen) ? 0.5: -5
         let magnitude:CGFloat = (shouldOpen) ? 20: -20
         let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth; -1
         
@@ -117,12 +119,13 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         animator.addBehavior(pushBehavior)
         
         let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
-        sideBarBehavior.elasticity = 0.3
+       // sideBarBehavior.elasticity = 0.3
+         sideBarBehavior.elasticity = 0.0
         animator.addBehavior(sideBarBehavior)
         
         
         
-        
+        //image for the Sidebar
         var bgView: UIImageView = UIImageView(image: UIImage(named: "GreenBackground"))
         bgView.frame =  CGRect(x: 0, y: 0, width: 350.0, height: 150) //you might need to modify this frame to your tabbar frame
         sideBarContainerView.addSubview(bgView)
