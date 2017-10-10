@@ -16,6 +16,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
 
     //var sidebar:SideBar = SideBar()
     var slideMenu:SlideMenu = SlideMenu()
+    var slideMenuIcon:SlideMenu = SlideMenu()
+    
     
     
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         
 //       sidebarMenuItems()
         slideMenuItems()
+        slideMenuIcons()
  
     }
 //
@@ -40,6 +43,14 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
     func slideMenuItems(){
         slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
         slideMenu.delegate = self
+    }
+    
+    
+    //the icons for the Sidebar
+    func slideMenuIcons(){
+        slideMenuIcon = SlideMenu(sourceView: self.view, menuIcons: ["ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt"])
+        slideMenuIcon.delegate = self
+        
     }
     
     
@@ -71,7 +82,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_more_horiz_36pt"), style: .plain, target: self, action: #selector(handleMore))
         
         //create left NavigationButton
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sidebar", style: .plain, target: self, action: #selector(handelMenu))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"ic_menu_36pt"), style: .plain, target: self, action: #selector(handelMenu))
         
         //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handleMore))
         
