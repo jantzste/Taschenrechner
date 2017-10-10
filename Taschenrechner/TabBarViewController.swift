@@ -136,7 +136,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         tabCamera.tabBarItem =  tabCameraBarItem
         
         let tabTwo = renderScrollView()
-        let tabTwoBarItem = UITabBarItem(title: "Tab2", image: UIImage(named: "ic_lock_36pt"), selectedImage: UIImage(named: ""))
+        let tabTwoBarItem = UITabBarItem(title: "Liste", image: UIImage(named: "ic_list_36pt"), selectedImage: UIImage(named: ""))
         tabTwo.tabBarItem = tabTwoBarItem
         
         let arrayController = [tabHome,tabCamera, tabTwo]
