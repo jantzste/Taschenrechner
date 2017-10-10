@@ -21,7 +21,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
     }
     
     
-    let barWidth:CGFloat = 350.0
+    let barWidth:CGFloat = 300
     let sideBarTableViewTopInset:CGFloat = 170
     let sideBarContainerView:UIView = UIView()
     let sideMenuTableViewController: SlideMenuTableViewController = SlideMenuTableViewController()
@@ -84,7 +84,9 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         sideMenuTableViewController.tableView.delegate = sideMenuTableViewController
         sideMenuTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
         sideMenuTableViewController.tableView.reloadData()
-        sideMenuTableViewController.tableView.layer.borderWidth = 0.1
+        sideMenuTableViewController.tableView.layer.borderWidth = 0.3
+        sideMenuTableViewController.tableView.layer.borderColor = UIColor.lightGray.cgColor
+        
         //sideMenuTableViewController.tableView.layer.borderColor = UIColor.init(r: 0, g: 0, b: 0)
         
         sideBarContainerView.addSubview(blurView)
@@ -111,8 +113,9 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         isSideBarOpen = shouldOpen
         
        // let gravityX:CGFloat = (shouldOpen) ? 0.5: -0.5
-        let gravityX:CGFloat = (shouldOpen) ? 0.5: -5
-        let magnitude:CGFloat = (shouldOpen) ? 20: -20
+        let gravityX:CGFloat = (shouldOpen) ? 0.5: -6.0
+        let magnitude:CGFloat = (shouldOpen) ? 20: -6.0
+//        let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth; -1
         let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth; -1
         
         let gravityBehavior: UIGravityBehavior = UIGravityBehavior(items: [sideBarContainerView])
@@ -129,17 +132,17 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         animator.addBehavior(pushBehavior)
         
         let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
-       // sideBarBehavior.elasticity = 0.3
-         sideBarBehavior.elasticity = 0.0
+        //sideBarBehavior.elasticity = 0.3
+         sideBarBehavior.elasticity = -6
         animator.addBehavior(sideBarBehavior)
         
         
         
         //image for the Sidebar
         var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
-        bgView.frame =  CGRect(x: 0, y: 0, width: 350.0, height: 150) //you might need to modify this frame to your tabbar frame
+        bgView.frame =  CGRect(x: 0, y: 0, width: 300, height: 150) //you might need to modify this frame to your tabbar frame
         
-        bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
+       // bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
         sideBarContainerView.addSubview(bgView)
         
         
