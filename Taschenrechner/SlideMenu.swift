@@ -84,7 +84,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         sideMenuTableViewController.tableView.delegate = sideMenuTableViewController
         sideMenuTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
         sideMenuTableViewController.tableView.reloadData()
-        sideMenuTableViewController.tableView.layer.borderWidth = 1
+        sideMenuTableViewController.tableView.layer.borderWidth = 0.1
         //sideMenuTableViewController.tableView.layer.borderColor = UIColor.init(r: 0, g: 0, b: 0)
         
         sideBarContainerView.addSubview(blurView)

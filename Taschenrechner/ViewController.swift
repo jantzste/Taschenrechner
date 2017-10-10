@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     func addTitelAndBackground(){
         let titel = UILabel(frame: CGRect(x: 12, y: 20, width: 200, height: 21))
         titel.textAlignment = .left
-        titel.text = "Homescreen"
+        titel.text = "Neuigkeiten"
         titel.textColor = UIColor.black
         titel.font = titel.font.withSize(20)
         
