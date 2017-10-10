@@ -136,8 +136,10 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         
         
         //image for the Sidebar
-        var bgView: UIImageView = UIImageView(image: UIImage(named: "GreenBackground"))
+        var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
         bgView.frame =  CGRect(x: 0, y: 0, width: 350.0, height: 150) //you might need to modify this frame to your tabbar frame
+        
+        bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
         sideBarContainerView.addSubview(bgView)
         
         
