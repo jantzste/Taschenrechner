@@ -19,8 +19,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         delegate?.slideMenuDidSelectButtonAtIndex(index: indexPath.row)
         
     }
-    
-    
+
     let barWidth:CGFloat = 300
     let sideBarTableViewTopInset:CGFloat = 170
     let sideBarContainerView:UIView = UIView()
@@ -50,21 +49,11 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         let hideGestureRecognizer:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SlideMenu.handleSwipe(recognizer:)))
         hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.left
         originView.addGestureRecognizer(hideGestureRecognizer)
-        
-    }
-    
-    init(sourceView: UIView, menuIcons:Array<String>) {
 
-        
-        
     }
-    
-    
-    
-    
-    
+  
     func setupSideBar(){
-        
+
         sideBarContainerView.frame = CGRect(x: -barWidth - 1, y: originView!.frame.origin.y, width: barWidth, height: originView!.frame.size.height)
         sideBarContainerView.backgroundColor = UIColor.clear
         sideBarContainerView.clipsToBounds = false
@@ -86,15 +75,16 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         sideMenuTableViewController.tableView.reloadData()
         sideMenuTableViewController.tableView.layer.borderWidth = 0.3
         sideMenuTableViewController.tableView.layer.borderColor = UIColor.lightGray.cgColor
-        
-        //sideMenuTableViewController.tableView.layer.borderColor = UIColor.init(r: 0, g: 0, b: 0)
+
+        sideMenuTableViewController.tableView.backgroundColor = UIColor.blue
         
         sideBarContainerView.addSubview(blurView)
         sideBarContainerView.addSubview(sideMenuTableViewController.tableView)
 
-        
-        
     }
+
+    // edgesForExtendedLayout = .top // or .top
+
     
     func handleSwipe(recognizer: UISwipeGestureRecognizer){
         
@@ -135,9 +125,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         //sideBarBehavior.elasticity = 0.3
          sideBarBehavior.elasticity = -6
         animator.addBehavior(sideBarBehavior)
-        
-        
-        
+
         //image for the Sidebar
         var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
         bgView.frame =  CGRect(x: 0, y: 0, width: 300, height: 150) //you might need to modify this frame to your tabbar frame
@@ -145,10 +133,9 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
        // bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
         sideBarContainerView.addSubview(bgView)
         
-        
-        
-        
     }
+
+
     
 }
 

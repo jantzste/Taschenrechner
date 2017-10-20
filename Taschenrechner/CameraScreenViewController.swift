@@ -18,10 +18,7 @@ class CameraScreenViewController: UIViewController, AVCaptureMetadataOutputObjec
         super.viewDidLoad()
         
         useCamera()
-        
-        //For testing after that can be deleted
-        self.title = "Camerascreen"
-        
+
     }
     
     

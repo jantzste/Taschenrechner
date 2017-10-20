@@ -14,21 +14,24 @@ protocol SlideMenuTableViewControllerDelegate {
 
 class SlideMenuTableViewController: UITableViewController {
     
+    
     var delegate:SlideMenuTableViewControllerDelegate?
     var tableData:Array<String> = []
-
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "slideCell")
-
-
+        
+        
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "slideCell")
@@ -40,10 +43,13 @@ class SlideMenuTableViewController: UITableViewController {
             let selectedView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: cell!.frame.size.width, height: cell!.frame.size.height))
             selectedView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
             cell!.selectedBackgroundView = selectedView
-
+            
             
             var image: UIImage = UIImage(named:"food")!
             cell?.imageView?.image = image
+            
+            
+            
         }
         
         cell!.textLabel?.text = tableData[indexPath.row]
@@ -61,3 +67,4 @@ class SlideMenuTableViewController: UITableViewController {
     }
 
 }
+

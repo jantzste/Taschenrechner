@@ -9,29 +9,30 @@
 import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SideBarDelegate, SlideMenuDelegate {
+    
     func sideBarDidSelectButtonAtIndex(index: Int) {
     
     }
-    
+
+        
 
     //var sidebar:SideBar = SideBar()
     var slideMenu:SlideMenu = SlideMenu()
-    var slideMenuIcon:SlideMenu = SlideMenu()
-    
-    
+    var slideMenuIcon:SlideMenu = SlideMenu()    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
         
-       setNaviBar()
+        setNaviBar()
         
-//       sidebarMenuItems()
+//      sidebarMenuItems()
         slideMenuItems()
         slideMenuIcons()
- 
     }
+    
+
 //
 //    //sidebar1
 //    func sidebarMenuItems(){
@@ -48,8 +49,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
     
     //the icons for the Sidebar
     func slideMenuIcons(){
-        slideMenuIcon = SlideMenu(sourceView: self.view, menuIcons: ["ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt","ic_accessibility_36pt"])
-        slideMenuIcon.delegate = self
+
         
     }
     
@@ -64,11 +64,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
 //    }
 //    
 
- 
-
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)        
+        super.viewWillAppear(animated)
         renderTabBar()
+
     }
     
     override var prefersStatusBarHidden: Bool{
@@ -92,6 +91,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         
         self.navigationItem.title = "Home"
         
+        
+        //set backgroundcolor of the view
+        self.view.backgroundColor = UIColor.white
+
 
     }
     
@@ -111,8 +114,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
 
     
     func handelMenu(){
-
-
+        //show sidebar
+       let sidebarcontainer =  ViewControllerContainer()
+        navigationController?.show(sidebarcontainer, sender: nil)
+        
     }
     
     
@@ -130,28 +135,31 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         let tabHome = ViewController()
         let tabHomeBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_36pt"), selectedImage: UIImage(named: ""))
         tabHome.tabBarItem = tabHomeBarItem
-        
+            
         let tabCamera = CameraScreenViewController()
         let tabCameraBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "ic_photo_camera_36pt"), selectedImage: UIImage(named: ""))
         tabCamera.tabBarItem =  tabCameraBarItem
         
-        let tabTwo = renderScrollView()
-        let tabTwoBarItem = UITabBarItem(title: "Liste", image: UIImage(named: "ic_list_36pt"), selectedImage: UIImage(named: ""))
-        tabTwo.tabBarItem = tabTwoBarItem
+        let tabList = ListViewController()
+        let tabListItem = UITabBarItem(title: "Liste", image: UIImage(named: "ic_list_36pt"), selectedImage: UIImage(named: ""))
+        tabList.tabBarItem = tabListItem
         
-        let arrayController = [tabHome,tabCamera, tabTwo]
+        let arrayController = [tabHome,tabCamera, tabList]
         
         self.viewControllers = arrayController
         
-        UITabBar.appearance().tintColor = UIColor.black
- 
+        UITabBar.appearance().tintColor = UIColor(red: 7/255, green: 116/255, blue: 0/255, alpha: 1)
+        
+        UITabBar.appearance().barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+
     }
     
     //UITabBarControllerDelegate method
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected\(viewController.title)")
-        
-        
+   
     }
+    
+
 }
 

@@ -11,6 +11,7 @@
 		F508F07E1F5C36B20099E17E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07D1F5C36B20099E17E /* SettingCell.swift */; };
 		F508F0801F5C39380099E17E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508F07F1F5C39380099E17E /* Extensions.swift */; };
 		F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F33B41F2AC4A300E990DD /* renderScrollView.swift */; };
+		F52776CF1F99ED7A0014CD1F /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52776CE1F99ED7A0014CD1F /* SetupViewController.swift */; };
 		F54BCC041F79DF1100C82DC1 /* SlideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BCC031F79DF1100C82DC1 /* SlideMenuTableViewController.swift */; };
 		F54BCC061F79E25600C82DC1 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BCC051F79E25600C82DC1 /* SlideMenu.swift */; };
 		F57181E61F33F01700CFA7D3 /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181E51F33F01700CFA7D3 /* MinusButton.swift */; };
@@ -20,6 +21,10 @@
 		F57181EE1F33F42A00CFA7D3 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57181ED1F33F42A00CFA7D3 /* PlusButton.swift */; };
 		F58B65BE1F4CD6A4005A1420 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */; };
 		F5A8C8751F656A4500310F85 /* CameraScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */; };
+		F5AD549C1F8F7D1B004FEA65 /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD549B1F8F7D1B004FEA65 /* ViewControllerContainer.swift */; };
+		F5AD549F1F8F7D55004FEA65 /* tableViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD549E1F8F7D55004FEA65 /* tableViewContent.swift */; };
+		F5BEE5331F979E0200DC32BB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BEE5321F979E0200DC32BB /* ListViewController.swift */; };
+		F5BEE5351F97AAFB00DC32BB /* setupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BEE5341F97AAFB00DC32BB /* setupNavigationController.swift */; };
 		F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4821F198EE20052420D /* AppDelegate.swift */; };
 		F5D1A4851F198EE20052420D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4841F198EE20052420D /* ViewController.swift */; };
 		F5D1A4881F198EE20052420D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D1A4861F198EE20052420D /* Main.storyboard */; };
@@ -56,6 +61,7 @@
 		F508F07D1F5C36B20099E17E /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F508F07F1F5C39380099E17E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F51F33B41F2AC4A300E990DD /* renderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = renderScrollView.swift; sourceTree = "<group>"; };
+		F52776CE1F99ED7A0014CD1F /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		F54BCC031F79DF1100C82DC1 /* SlideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewController.swift; sourceTree = "<group>"; };
 		F54BCC051F79E25600C82DC1 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
 		F57181E51F33F01700CFA7D3 /* MinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
@@ -65,6 +71,10 @@
 		F57181ED1F33F42A00CFA7D3 /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		F5A8C8741F656A4500310F85 /* CameraScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScreenViewController.swift; sourceTree = "<group>"; };
+		F5AD549B1F8F7D1B004FEA65 /* ViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
+		F5AD549E1F8F7D55004FEA65 /* tableViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewContent.swift; sourceTree = "<group>"; };
+		F5BEE5321F979E0200DC32BB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F5BEE5341F97AAFB00DC32BB /* setupNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupNavigationController.swift; sourceTree = "<group>"; };
 		F5D1A47F1F198EE20052420D /* Taschenrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taschenrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D1A4821F198EE20052420D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D1A4841F198EE20052420D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 		F50129871F68A7C7002F9D79 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F5BEE5341F97AAFB00DC32BB /* setupNavigationController.swift */,
 				F508F07F1F5C39380099E17E /* Extensions.swift */,
 			);
 			name = Helper;
@@ -169,8 +180,19 @@
 				F5FC1F311F6ADE870031DA54 /* CoreDataManager.swift */,
 				F54BCC031F79DF1100C82DC1 /* SlideMenuTableViewController.swift */,
 				F54BCC051F79E25600C82DC1 /* SlideMenu.swift */,
+				F5BEE5321F979E0200DC32BB /* ListViewController.swift */,
+				F52776CE1F99ED7A0014CD1F /* SetupViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F5AD549D1F8F7D22004FEA65 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F5AD549B1F8F7D1B004FEA65 /* ViewControllerContainer.swift */,
+				F5AD549E1F8F7D55004FEA65 /* tableViewContent.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		F5D1A4761F198EE20052420D = {
@@ -198,6 +220,7 @@
 			children = (
 				F51F33B81F2AC86C00E990DD /* Main */,
 				F50129871F68A7C7002F9D79 /* Helper */,
+				F5AD549D1F8F7D22004FEA65 /* New Group */,
 				F58B65BC1F4CD68B005A1420 /* Controller */,
 				F5E4893C1F7876C400CBD785 /* Sidebar */,
 				F5DC6DCF1F63FDAC00628824 /* Cell */,
@@ -391,8 +414,13 @@
 				F508F07E1F5C36B20099E17E /* SettingCell.swift in Sources */,
 				F508F07C1F5C34880099E17E /* BaseCell.swift in Sources */,
 				F5A8C8751F656A4500310F85 /* CameraScreenViewController.swift in Sources */,
+				F5AD549F1F8F7D55004FEA65 /* tableViewContent.swift in Sources */,
 				F57181EC1F33F2F800CFA7D3 /* FinalResultButton.swift in Sources */,
+				F5AD549C1F8F7D1B004FEA65 /* ViewControllerContainer.swift in Sources */,
+				F52776CF1F99ED7A0014CD1F /* SetupViewController.swift in Sources */,
 				F5D1A4851F198EE20052420D /* ViewController.swift in Sources */,
+				F5BEE5351F97AAFB00DC32BB /* setupNavigationController.swift in Sources */,
+				F5BEE5331F979E0200DC32BB /* ListViewController.swift in Sources */,
 				F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */,
 				F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */,
 				F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */,

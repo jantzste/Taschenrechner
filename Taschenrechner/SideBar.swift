@@ -90,7 +90,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         SideBarBehavior.elasticity = 0.3
         animator!.addBehavior(SideBarBehavior)
     }
-//    func SideBarControlDidSelectRow(_ indexPath: IndexPath) {
-//        delegate?.SideBarDidSelectButtonAtIndex(indexPath.row)
-//    }
+    func SideBarControlDidSelectRow(_ indexPath: IndexPath) {
+        delegate?.sideBarDidSelectButtonAtIndex(index: indexPath.row)
+    }
 }

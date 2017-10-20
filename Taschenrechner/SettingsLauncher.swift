@@ -17,6 +17,7 @@ class Setting: NSObject{
         self.imageName = imageName
     }
 }
+
 //use enum to make to code more bug free
 enum SettingName: String{
     case Cancel = "abbrechen"
@@ -55,7 +56,6 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     func showSettings(){
         
         if let window = UIApplication.shared.keyWindow{
-            
             
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             

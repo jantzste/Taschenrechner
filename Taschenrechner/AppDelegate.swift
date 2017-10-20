@@ -26,18 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //set the color of the title of navigationbar to white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
 
-        UIApplication.shared.statusBarStyle = .lightContent
+       UIApplication.shared.statusBarStyle = .lightContent
 
         //change the color of the statusbar
-//        let statusBarBackgroundView = UIView()
-//        statusBarBackgroundView.backgroundColor = UIColor(red: 76, green: 76, blue: 76, alpha: 1)
-//        
-//        window?.addSubview(statusBarBackgroundView)
-//        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
-//        window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
+        var statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor(red: 55/255, green: 144/255, blue: 78/255, alpha: 1)
+        
+        window?.addSubview(statusBarBackgroundView)
+        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+        window?.addConstraintsWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
 //    
         return true
     }
+
     
 
 

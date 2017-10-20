@@ -8,24 +8,22 @@
 
 import UIKit
 
-//for the camera
-import AVFoundation
 
 class ViewController: UIViewController {
+    
+    let testUINavi:UINavigationController = SetupViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNaviBar()
-        
-        addScrollView()
+        //setNaviBar()
         
         addTitelAndBackground()
-
-        //For testing after that can be deleted
-        self.title = "Homescreen"
         
+      testUINavi
+
     }
+
 
     //add background image for the info
     
@@ -35,19 +33,18 @@ class ViewController: UIViewController {
         pictureView.frame = CGRect(x: 100, y: 200, width: 200, height: 200)
         
         pictureView.contentMode = UIViewContentMode.scaleAspectFit
-        
         //pictureView.translatesAutoresizingMaskIntoConstraints = false
         return pictureView
     }()
     
     func setNaviBar(){
 
-        self.navigationController?.navigationBar.barTintColor = UIColor.black
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.title = "CameraApp"
         
         //set backgroundColor of homescreen to white
-        self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
 
     }
     
@@ -76,7 +73,7 @@ class ViewController: UIViewController {
         titel.font = titel.font.withSize(20)
         
         self.view.addSubview(titel)
-        //self.view.addSubview(backgroundImageView)
+        self.view.addSubview(backgroundImageView)
         
     }
     
@@ -84,6 +81,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     
 
     

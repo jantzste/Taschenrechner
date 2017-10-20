@@ -38,14 +38,13 @@ class MenuViewController: UIViewController {
         titel.font = titel.font.withSize(20)
         
         self.view.addSubview(titel)
-        
-        
+
     }
     
     
     //add the navigationBar
     func setNaviBar(){
-       view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+       self.view.backgroundColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
         
         //make the screenSize automatically
         let screenSize: CGRect = UIScreen.main.bounds
