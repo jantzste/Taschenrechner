@@ -37,6 +37,8 @@ class ViewControllerContainer: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+
+    
     func setLogo(){
         
         tableView.addSubview(whiteView)
@@ -102,10 +104,11 @@ class ViewControllerContainer: UIViewController, UITableViewDelegate, UITableVie
     
     
     func setNaviBar(){
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.black
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.title = "Sidebar"
+        
+
         
     }
     override func didReceiveMemoryWarning() {

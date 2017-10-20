@@ -8,15 +8,8 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SideBarDelegate, SlideMenuDelegate {
-    
-    func sideBarDidSelectButtonAtIndex(index: Int) {
-    
-    }
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SlideMenuDelegate {
 
-        
-
-    //var sidebar:SideBar = SideBar()
     var slideMenu:SlideMenu = SlideMenu()
     var slideMenuIcon:SlideMenu = SlideMenu()    
     
@@ -26,21 +19,12 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         self.delegate = self
         
         setNaviBar()
-        
-//      sidebarMenuItems()
         slideMenuItems()
         slideMenuIcons()
+        
     }
-    
 
-//
-//    //sidebar1
-//    func sidebarMenuItems(){
-//        sidebar = SideBar(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
-//        sidebar.delegate = self
-//    }
-//
-    //sidebar2
+    //sidebar
     func slideMenuItems(){
         slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
         slideMenu.delegate = self
@@ -58,11 +42,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         
     }
 
-    
-//    func sideBarDidSelectButtonAtIndex(index: Int) {
-//        
-//    }
-//    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -83,14 +62,11 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         //create left NavigationButton
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"ic_menu_36pt"), style: .plain, target: self, action: #selector(handelMenu))
         
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Verlauf", style: .plain, target: self, action: #selector(handleMore))
-        
         //set the color
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         
         self.navigationItem.title = "Home"
-        
         
         //set backgroundcolor of the view
         self.view.backgroundColor = UIColor.white
@@ -151,6 +127,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Side
         UITabBar.appearance().tintColor = UIColor(red: 7/255, green: 116/255, blue: 0/255, alpha: 1)
         
         UITabBar.appearance().barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+        
+
+
 
     }
     
