@@ -46,12 +46,12 @@ class ListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.view.backgroundColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
-
-    }
-    
+//    
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.view.backgroundColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+//
+//    }
+//    
     
     func setNaviBar(){
         
@@ -60,7 +60,7 @@ class ListViewController: UIViewController {
         self.navigationItem.title = "CameraApp"
         
         //set backgroundColor of homescreen
-        self.view.backgroundColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+        //self.view.backgroundColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
 
     }
 
