@@ -126,10 +126,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         
         UITabBar.appearance().tintColor = UIColor.white
         
-        UITabBar.appearance().barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+        UITabBar.appearance().barTintColor = UIColor(r: 92, g: 162, b: 78)
         
         //change the color of the unselectedItemTintColor
-        self.tabBar.unselectedItemTintColor = UIColor(red: 7/255, green: 116/255, blue: 0/255, alpha: 1)
+        self.tabBar.unselectedItemTintColor = UIColor(r: 7, g: 116, b: 0)
 
     }
     

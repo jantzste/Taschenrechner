@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(r: 92, g: 162, b: 78)
     }
     
 
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
     
     func setNaviBar(){
 
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(r: 92, g: 162, b: 78)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.title = "CameraApp"
         
         //set backgroundColor of homescreen to white
-        self.view.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        self.view.backgroundColor = UIColor(r: 255, g: 255, b: 255)
 
     }
     

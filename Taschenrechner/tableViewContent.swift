@@ -27,7 +27,7 @@ class tableViewContent: UITableView, UITableViewDelegate, UITableViewDataSource{
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "sidebarCell")
        
         //set backgroundColor of the ViewController
-        tableView.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 246/255)
+        tableView.backgroundColor = UIColor(r: 246, g: 246, b: 246)
         tableView.separatorStyle = .none
         
     }
