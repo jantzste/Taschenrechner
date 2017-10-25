@@ -22,6 +22,12 @@ class ViewControllerContainer: UIViewController {
         self.view.addSubview(table.tableView)
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        table.setupTableView()
+        
+        self.view.addSubview(table.tableView)
+    }
 
 //    func setLogo(){
 //

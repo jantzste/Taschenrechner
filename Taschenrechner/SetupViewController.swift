@@ -24,7 +24,7 @@ class SetupViewController: UINavigationController {
     
     func setNaviBar(){
         
-        self.view.backgroundColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
+        self.view.backgroundColor = UIColor(r: 92, g: 162, b: 78)
   
     }
     
