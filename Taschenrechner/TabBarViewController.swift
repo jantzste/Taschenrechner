@@ -11,8 +11,8 @@ import UIKit
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SlideMenuDelegate {
 
     var slideMenu:SlideMenu = SlideMenu()
-    var slideMenuIcon:SlideMenu = SlideMenu()    
-    
+    //var slideMenuIcon:SlideMenu = SlideMenu()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,8 +21,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         setNaviBar()
         slideMenuItems()
         slideMenuIcons()
-        
     }
+    
 
     //sidebar
     func slideMenuItems(){

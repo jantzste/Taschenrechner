@@ -24,17 +24,13 @@
 		F5AD549C1F8F7D1B004FEA65 /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD549B1F8F7D1B004FEA65 /* ViewControllerContainer.swift */; };
 		F5AD549F1F8F7D55004FEA65 /* tableViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD549E1F8F7D55004FEA65 /* tableViewContent.swift */; };
 		F5BEE5331F979E0200DC32BB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BEE5321F979E0200DC32BB /* ListViewController.swift */; };
-		F5BEE5351F97AAFB00DC32BB /* setupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BEE5341F97AAFB00DC32BB /* setupNavigationController.swift */; };
 		F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4821F198EE20052420D /* AppDelegate.swift */; };
 		F5D1A4851F198EE20052420D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4841F198EE20052420D /* ViewController.swift */; };
 		F5D1A4881F198EE20052420D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D1A4861F198EE20052420D /* Main.storyboard */; };
 		F5D1A48D1F198EE20052420D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D1A48B1F198EE20052420D /* LaunchScreen.storyboard */; };
 		F5D1A4981F198EE20052420D /* TaschenrechnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4971F198EE20052420D /* TaschenrechnerTests.swift */; };
 		F5D1A4A31F198EE20052420D /* TaschenrechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4A21F198EE20052420D /* TaschenrechnerUITests.swift */; };
-		F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1A4B41F1991620052420D /* MenuViewController.swift */; };
 		F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */; };
-		F5E489391F786CC400CBD785 /* SideBarTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E489381F786CC400CBD785 /* SideBarTableTableViewController.swift */; };
-		F5E4893B1F786D0700CBD785 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4893A1F786D0700CBD785 /* SideBar.swift */; };
 		F5F4BF291F648A2200DED086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F4BF281F648A2200DED086 /* Assets.xcassets */; };
 		F5FC1F321F6ADE870031DA54 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC1F311F6ADE870031DA54 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +70,6 @@
 		F5AD549B1F8F7D1B004FEA65 /* ViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
 		F5AD549E1F8F7D55004FEA65 /* tableViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewContent.swift; sourceTree = "<group>"; };
 		F5BEE5321F979E0200DC32BB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		F5BEE5341F97AAFB00DC32BB /* setupNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupNavigationController.swift; sourceTree = "<group>"; };
 		F5D1A47F1F198EE20052420D /* Taschenrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taschenrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D1A4821F198EE20052420D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D1A4841F198EE20052420D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,10 +82,7 @@
 		F5D1A49E1F198EE20052420D /* TaschenrechnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaschenrechnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D1A4A21F198EE20052420D /* TaschenrechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaschenrechnerUITests.swift; sourceTree = "<group>"; };
 		F5D1A4A41F198EE20052420D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5D1A4B41F1991620052420D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		F5E489381F786CC400CBD785 /* SideBarTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableTableViewController.swift; sourceTree = "<group>"; };
-		F5E4893A1F786D0700CBD785 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		F5F4BF281F648A2200DED086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5FC1F311F6ADE870031DA54 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +115,6 @@
 		F50129871F68A7C7002F9D79 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F5BEE5341F97AAFB00DC32BB /* setupNavigationController.swift */,
 				F508F07F1F5C39380099E17E /* Extensions.swift */,
 			);
 			name = Helper;
@@ -191,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				F5D1A4841F198EE20052420D /* ViewController.swift */,
-				F5D1A4B41F1991620052420D /* MenuViewController.swift */,
 				F58B65BD1F4CD6A4005A1420 /* SettingsLauncher.swift */,
 				F5DC6DCD1F63EE8800628824 /* TabBarViewController.swift */,
 				F5BEE5321F979E0200DC32BB /* ListViewController.swift */,
@@ -238,7 +228,6 @@
 				F50129871F68A7C7002F9D79 /* Helper */,
 				F5AD549D1F8F7D22004FEA65 /* New Group */,
 				F58B65BC1F4CD68B005A1420 /* Controller */,
-				F5E4893C1F7876C400CBD785 /* Sidebar */,
 				F5DC6DCF1F63FDAC00628824 /* Cell */,
 				F51F33B71F2AC84500E990DD /* ScrollView */,
 				F51F33B61F2AC83B00E990DD /* Button */,
@@ -271,15 +260,6 @@
 				F508F07D1F5C36B20099E17E /* SettingCell.swift */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		F5E4893C1F7876C400CBD785 /* Sidebar */ = {
-			isa = PBXGroup;
-			children = (
-				F5E489381F786CC400CBD785 /* SideBarTableTableViewController.swift */,
-				F5E4893A1F786D0700CBD785 /* SideBar.swift */,
-			);
-			name = Sidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,7 +399,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E4893B1F786D0700CBD785 /* SideBar.swift in Sources */,
 				F54BCC041F79DF1100C82DC1 /* SlideMenuTableViewController.swift in Sources */,
 				F5DC6DCE1F63EE8800628824 /* TabBarViewController.swift in Sources */,
 				F57181EE1F33F42A00CFA7D3 /* PlusButton.swift in Sources */,
@@ -435,15 +414,12 @@
 				F5AD549C1F8F7D1B004FEA65 /* ViewControllerContainer.swift in Sources */,
 				F52776CF1F99ED7A0014CD1F /* SetupViewController.swift in Sources */,
 				F5D1A4851F198EE20052420D /* ViewController.swift in Sources */,
-				F5BEE5351F97AAFB00DC32BB /* setupNavigationController.swift in Sources */,
 				F5BEE5331F979E0200DC32BB /* ListViewController.swift in Sources */,
 				F57181EA1F33F21000CFA7D3 /* MultiplicationButton.swift in Sources */,
-				F5D1A4B51F1991620052420D /* MenuViewController.swift in Sources */,
 				F51F33B51F2AC4A300E990DD /* renderScrollView.swift in Sources */,
 				F5D1A4831F198EE20052420D /* AppDelegate.swift in Sources */,
 				F57181E81F33F17500CFA7D3 /* DivideButton.swift in Sources */,
 				F508F0801F5C39380099E17E /* Extensions.swift in Sources */,
-				F5E489391F786CC400CBD785 /* SideBarTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

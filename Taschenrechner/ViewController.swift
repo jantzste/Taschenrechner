@@ -11,16 +11,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let testUINavi:UINavigationController = SetupViewController()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNaviBar()
+       setNaviBar()
         
         addTitelAndBackground()
-
+        
     }
+
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 92/255, green: 162/255, blue: 78/255, alpha: 1)
@@ -51,11 +50,11 @@ class ViewController: UIViewController {
     }
     
     func showControllerForSetting(setting: Setting){
-        let dummySettingsViewController = UIViewController()
-        dummySettingsViewController.view.backgroundColor = UIColor.white
-        dummySettingsViewController.navigationItem.title = setting.name.rawValue
+        let settingsViewController = UIViewController()
+        settingsViewController.view.backgroundColor = UIColor.white
+        settingsViewController.navigationItem.title = setting.name.rawValue
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.pushViewController(dummySettingsViewController, animated: true)
+        navigationController?.pushViewController(settingsViewController, animated: true)
     }
     
     //add the cardView
@@ -68,11 +67,11 @@ class ViewController: UIViewController {
     
     //add a title above of the scrollView
     func addTitelAndBackground(){
-        let titel = UILabel(frame: CGRect(x: 12, y: 20, width: 200, height: 21))
+        let titel = UILabel(frame: CGRect(x: 12, y: 20, width: 200, height: 30))
         titel.textAlignment = .left
-        titel.text = "Neuigkeiten"
+        titel.text = "Information"
         titel.textColor = UIColor.black
-        titel.font = titel.font.withSize(20)
+        titel.font = titel.font.withSize(40)
         
         self.view.addSubview(titel)
         self.view.addSubview(backgroundImageView)
