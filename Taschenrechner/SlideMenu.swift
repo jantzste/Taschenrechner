@@ -76,8 +76,8 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         sideMenuTableViewController.tableView.layer.borderWidth = 0.3
         sideMenuTableViewController.tableView.layer.borderColor = UIColor.lightGray.cgColor
 
-        sideMenuTableViewController.tableView.backgroundColor = UIColor.blue
-        
+        sideMenuTableViewController.tableView.backgroundColor = UIColor(r: 255, g: 255, b: 255)
+
         sideBarContainerView.addSubview(blurView)
         sideBarContainerView.addSubview(sideMenuTableViewController.tableView)
 
@@ -86,8 +86,8 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
     // edgesForExtendedLayout = .top // or .top
 
     
-    func handleSwipe(recognizer: UISwipeGestureRecognizer){
-        
+   func handleSwipe(recognizer: UISwipeGestureRecognizer){
+            
         if recognizer.direction == UISwipeGestureRecognizerDirection.left{
             showSideBar(shouldOpen: false)
             delegate?.sideBarWillClose?()
