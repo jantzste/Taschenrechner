@@ -9,10 +9,13 @@
 import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SlideMenuDelegate {
-
+    
     var slideMenu:SlideMenu = SlideMenu()
     //var slideMenuIcon:SlideMenu = SlideMenu()
-
+    
+    //to save is open or close
+    var slideMenuIsOpen = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,19 +24,20 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         setNaviBar()
         slideMenuItems()
         slideMenuIcons()
+        
     }
     
-
+    
     //sidebar
     func slideMenuItems(){
-        slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8",]);
+        slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8","ITEM9","ITEM10","ITEM11","ITEM12","ITEM13","ITEM14","ITEM15","ITEM16"]);
         slideMenu.delegate = self
     }
     
     
     //the icons for the Sidebar
     func slideMenuIcons(){
-
+        
         
     }
     
@@ -41,12 +45,12 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     func slideMenuDidSelectButtonAtIndex(index: Int) {
         
     }
-
-
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         renderTabBar()
-
+        
     }
     
     override var prefersStatusBarHidden: Bool{
@@ -60,7 +64,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_more_horiz_36pt"), style: .plain, target: self, action: #selector(handleMore))
         
         //create left NavigationButton
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"ic_menu_36pt"), style: .plain, target: self, action: #selector(handelMenu))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"ic_menu_36pt"), style: .plain, target: self, action: #selector(handelSidebar))
         
         //set the color
         navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
@@ -70,10 +74,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         
         //set backgroundcolor of the view
         self.view.backgroundColor = UIColor.white
-
-
+ 
     }
-    
     
     lazy var settingsLauncher : SettingsLauncher = {
         let launcher = SettingsLauncher()
@@ -87,31 +89,27 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         //show menu
         settingsLauncher.showSettings()
     }
-    var slideMenuIsOpen = true
 
-    
-    func handelMenu(){
+    func handelSidebar(){
         //show sidebar
-      // let sidebarcontainer =  ViewControllerContainer()
-      //  navigationController?.show(sidebarcontainer, sender: nil)
         
-        
-
         if slideMenuIsOpen == true{
             slideMenu.showSideBar(shouldOpen: true)
-
+            
             slideMenuIsOpen = false
+
+           // showSettings()
+            
+            
         }else{
-           // slideMenu.showSideBar(shouldOpen: false)
             
             slideMenu.showSideBar(shouldOpen: false)
             
             slideMenuIsOpen = true
-
-
+            
+            
         }
         
-
     }
     
     
@@ -129,7 +127,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         let tabHome = ViewController()
         let tabHomeBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_36pt"), selectedImage: UIImage(named: ""))
         tabHome.tabBarItem = tabHomeBarItem
-            
+        
         let tabCamera = CameraScreenViewController()
         let tabCameraBarItem = UITabBarItem(title: "Camera", image: UIImage(named: "ic_photo_camera_36pt"), selectedImage: UIImage(named: ""))
         tabCamera.tabBarItem =  tabCameraBarItem
@@ -148,16 +146,16 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         
         //change the color of the unselectedItemTintColor
         self.tabBar.unselectedItemTintColor = UIColor(r: 7, g: 116, b: 0)
-
+        
     }
     
     //UITabBarControllerDelegate method
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected\(viewController.title)")
-   
+        
     }
     
-
+    
 }
 
 

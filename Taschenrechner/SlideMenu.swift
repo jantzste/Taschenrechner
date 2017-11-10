@@ -91,6 +91,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         if recognizer.direction == UISwipeGestureRecognizerDirection.left{
             showSideBar(shouldOpen: false)
             delegate?.sideBarWillClose?()
+
         }else{
             showSideBar(shouldOpen: true)
             delegate?.sideBarWillOpen?()
@@ -132,7 +133,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         
        // bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
         sideBarContainerView.addSubview(bgView)
-        
+ 
     }
 
 
