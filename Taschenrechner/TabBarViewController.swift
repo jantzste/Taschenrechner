@@ -9,6 +9,59 @@
 import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SlideMenuDelegate {
+
+    //TODO: add a blackview behind the sidebar
+    
+    let blackView = UIView()
+    let cellHeight: CGFloat = 50
+    
+    //show menu
+    func showSettings(){
+        
+        if let window = UIApplication.shared.keyWindow{
+            
+            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+            
+            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+            window.addSubview(blackView)
+            let height: CGFloat = CGFloat(100) * cellHeight
+            let y = window.frame.height - height
+            
+            
+            blackView.frame = window.frame
+            blackView.alpha = 0
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                
+                self.blackView.alpha = 1
+                
+                
+            } , completion: nil)
+            
+        }
+        
+    }
+    
+    
+    //dissmiss if click on the blackView
+    func handleDismiss() {
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.blackView.alpha = 0
+            
+            if let window = UIApplication.shared.keyWindow {
+                
+                self.slideMenu.showSideBar(shouldOpen: false)
+                
+                self.slideMenuIsOpen = true
+                
+            }
+            
+        })
+        
+        
+    }
+ 
     
     var slideMenu:SlideMenu = SlideMenu()
     //var slideMenuIcon:SlideMenu = SlideMenu()
@@ -17,6 +70,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     var slideMenuIsOpen = true
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         self.delegate = self
@@ -30,7 +84,13 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     
     //sidebar
     func slideMenuItems(){
+        
+        //TODO: add the Logoimage in the the cell
+        
+        
         slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8","ITEM9","ITEM10","ITEM11","ITEM12","ITEM13","ITEM14","ITEM15","ITEM16"]);
+        
+        
         slideMenu.delegate = self
     }
     
@@ -74,7 +134,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         
         //set backgroundcolor of the view
         self.view.backgroundColor = UIColor.white
- 
+        
     }
     
     lazy var settingsLauncher : SettingsLauncher = {
@@ -89,23 +149,24 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         //show menu
         settingsLauncher.showSettings()
     }
-
+    
+    //show sidebar
     func handelSidebar(){
-        //show sidebar
         
         if slideMenuIsOpen == true{
             slideMenu.showSideBar(shouldOpen: true)
             
             slideMenuIsOpen = false
 
-           // showSettings()
-            
+            showSettings()
             
         }else{
             
             slideMenu.showSideBar(shouldOpen: false)
             
             slideMenuIsOpen = true
+            
+            handleDismiss()
             
             
         }
@@ -120,6 +181,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.pushViewController(dummySettingsViewController, animated: true)
     }
+    
+
     
     func renderTabBar(){
         
@@ -159,124 +222,5 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
 }
 
 
-
-class SsettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    let blackView = UIView()
-    
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.white
-        return cv
-    }()
-    
-    let cellId = "cellId"
-    let cellHeight: CGFloat = 50
-    
-    let settings: [Setting] = {
-        
-        return [Setting(name:.Settings, imageName:"ic_settings_36pt"), Setting(name: .TermsPrivacy, imageName: "ic_lock_36pt"),Setting(name: .SendFeedback, imageName: "ic_feedback_36pt"),Setting(name: .Help, imageName: "ic_help_36pt"),Setting(name: .Account, imageName: "ic_account_circle_36pt"), Setting(name: .Cancel, imageName:"ic_account_circle_36pt")]
-    }()
-    
-    
-    var homeController: ViewController?
-    
-    var homeScreenController: TabBarViewController?
-    
-    //show menu
-    func showSettings(){
-        
-        if let window = UIApplication.shared.keyWindow{
-            
-            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
-            
-            window.addSubview(blackView)
-            window.addSubview(collectionView)
-            
-            let height: CGFloat = CGFloat(settings.count+1) * cellHeight
-            let y = window.frame.height - height
-            
-            collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: height)
-            
-            
-            blackView.frame = window.frame
-            blackView.alpha = 0
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                
-                self.blackView.alpha = 1
-                
-                self.collectionView.frame = CGRect(x: 0, y: y, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
-                
-            } , completion: nil)
-            
-        }
-        
-    }
-    
-    
-    //dissmiss if click on the blackView
-    func handleDismiss(setting: Setting) {
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.blackView.alpha = 0
-            
-            if let window = UIApplication.shared.keyWindow {
-                self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
-            }
-            
-        }) { (completed: Bool) in
-            
-            if setting.name != .Cancel{
-                
-                self.homeScreenController?.showControllerForSetting(setting: setting)
-                
-            }
-            
-        }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        print(settings.count)
-        return settings.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId , for: indexPath) as! SettingCell
-        
-        let setting = settings[indexPath.item]
-        cell.setting = setting
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: collectionView.frame.width, height: cellHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let setting = self.settings[indexPath.item]
-        
-        handleDismiss(setting: setting)
-        
-    }
-    
-    
-    override init (){
-        super.init()
-        
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        collectionView.register(SettingCell.self, forCellWithReuseIdentifier: cellId)
-        
-    }
-}
 
 

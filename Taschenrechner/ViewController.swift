@@ -10,16 +10,14 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setNaviBar()
         
         addTitelAndBackground()
         
     }
-
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.barTintColor = UIColor(r: 92, g: 162, b: 78)

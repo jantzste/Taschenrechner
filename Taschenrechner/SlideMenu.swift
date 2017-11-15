@@ -60,7 +60,6 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         
         originView.addSubview(sideBarContainerView)
         
-        
         let blurView:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
         blurView.frame = sideBarContainerView.bounds
         
@@ -77,7 +76,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         sideMenuTableViewController.tableView.layer.borderColor = UIColor.lightGray.cgColor
 
         sideMenuTableViewController.tableView.backgroundColor = UIColor(r: 255, g: 255, b: 255)
-
+        
         sideBarContainerView.addSubview(blurView)
         sideBarContainerView.addSubview(sideMenuTableViewController.tableView)
 
@@ -128,11 +127,11 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         animator.addBehavior(sideBarBehavior)
 
         //image for the Sidebar
-        var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
-        bgView.frame =  CGRect(x: 0, y: 0, width: 300, height: 150) //you might need to modify this frame to your tabbar frame
+//        var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
+//        bgView.frame =  CGRect(x: 0, y: 0, width: 300, height: 150) //you might need to modify this frame to your tabbar frame
         
        // bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
-        sideBarContainerView.addSubview(bgView)
+//        sideBarContainerView.addSubview(bgView)
  
     }
 
