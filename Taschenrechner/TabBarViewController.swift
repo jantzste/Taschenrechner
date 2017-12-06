@@ -34,7 +34,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             let height: CGFloat = CGFloat(1000)
             var y = window.frame.height - height
             
-            whiteView.frame = CGRect(x: 0, y: 0, width: 320, height: 1000)
+            whiteView.frame = CGRect(x: 0, y: 0, width: 200, height: 1000)
             
             blackView.frame = window.frame
             blackView.alpha = 0
@@ -45,8 +45,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             //            whiteView.addSubview(backgroundView)
             //
             var tableView: UITableView = UITableView()
-            tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 1000)
-            tableView.backgroundColor = UIColor.black
+            tableView.frame = CGRect(x: 0, y: 0, width: 312, height: 1000)
             
             tableView.separatorStyle = UITableViewCellSeparatorStyle.none
             whiteView.addSubview(tableView)
@@ -58,7 +57,13 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             bgView.frame =  CGRect(x: 0, y: -90, width: 320, height: 300)
             
             bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
+            
+            bgView.contentMode = .scaleAspectFit
+            
             tableView.addSubview(bgView)
+            
+//            tableView.addSubview(<#T##view: UIView##UIView#>)
+            
             
             UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
                 
