@@ -21,6 +21,23 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         return view
     }()
     
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.backgroundColor = UIColor.white
+        return table
+    }()
+    
+    let bgView: UIImageView = {
+        let image = UIImageView(image: UIImage(named:"food"))
+        return image
+    }()
+    
+//    var tableView: UITableView = UITableView()
+//    var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
+
+
+    
+    
     //show menu
     func showSettings(){
         if let window = UIApplication.shared.keyWindow{
@@ -32,9 +49,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             //            let height: CGFloat = CGFloat(100) * cellHeight
             //            let y = window.frame.height - height
             let height: CGFloat = CGFloat(1000)
+            let width: CGFloat = CGFloat(312)
             var y = window.frame.height - height
             
-            whiteView.frame = CGRect(x: 0, y: 0, width: 200, height: 1000)
+            whiteView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             
             blackView.frame = window.frame
             blackView.alpha = 0
@@ -45,16 +63,15 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             //            whiteView.addSubview(backgroundView)
             //
             var tableView: UITableView = UITableView()
-            tableView.frame = CGRect(x: 0, y: 0, width: 312, height: 1000)
+            tableView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             
             tableView.separatorStyle = UITableViewCellSeparatorStyle.none
             whiteView.addSubview(tableView)
             
-            
             // image for the Sidebar
-            var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
+//            var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
             bgView.contentMode = .scaleAspectFit
-            bgView.frame =  CGRect(x: 0, y: -90, width: 320, height: 300)
+            bgView.frame =  CGRect(x: 0, y: -90, width: width, height: 300)
             
             bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
             
@@ -62,7 +79,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             
             tableView.addSubview(bgView)
             
-//            tableView.addSubview(<#T##view: UIView##UIView#>)
+//TODO add labels and images in a NSDictionary and get the information to set in the sidebar (content for sidebar)
+//            tableView.addSubview(labelIconName)
             
             
             UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
@@ -82,13 +100,17 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     
     //dissmiss if click on the blackView
     func handleDismiss() {
-        
-        UIView.animate(withDuration: 0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        //
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
                 
-                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height: self.whiteView.frame.height)
+                
+//                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height: self.whiteView.frame.height)
+                
+                
+                  self.whiteView.frame = CGRect(x: 0, y: 1000, width: -1000, height: -1000)
                 
                 self.slideMenu.showSideBar(shouldOpen: false)
                 
