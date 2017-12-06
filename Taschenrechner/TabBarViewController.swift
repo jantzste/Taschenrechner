@@ -27,17 +27,12 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         return table
     }()
     
-    let bgView: UIImageView = {
+    // image for the Sidebar
+    let imageBackground: UIImageView = {
         let image = UIImageView(image: UIImage(named:"food"))
         return image
     }()
-    
-//    var tableView: UITableView = UITableView()
-//    var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
 
-
-    
-    
     //show menu
     func showSettings(){
         if let window = UIApplication.shared.keyWindow{
@@ -57,30 +52,22 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             blackView.frame = window.frame
             blackView.alpha = 0
             
-            //            var backgroundView: UIView = UIView()
-            //            backgroundView.frame = CGRect(x: 0, y: 0, width: 320, height: 400)
-            //            backgroundView.backgroundColor = UIColor.black
-            //            whiteView.addSubview(backgroundView)
-            //
-            var tableView: UITableView = UITableView()
             tableView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             
             tableView.separatorStyle = UITableViewCellSeparatorStyle.none
             whiteView.addSubview(tableView)
             
-            // image for the Sidebar
-//            var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
-            bgView.contentMode = .scaleAspectFit
-            bgView.frame =  CGRect(x: 0, y: -90, width: width, height: 300)
+            imageBackground.contentMode = .scaleAspectFit
+            imageBackground.frame =  CGRect(x: 0, y: -90, width: width, height: 300)
             
-            bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
+            imageBackground.layer.borderColor = UIColor.lightGray.cgColor //set your color here
             
-            bgView.contentMode = .scaleAspectFit
+            imageBackground.contentMode = .scaleAspectFit
             
-            tableView.addSubview(bgView)
+            tableView.addSubview(imageBackground)
             
-//TODO add labels and images in a NSDictionary and get the information to set in the sidebar (content for sidebar)
-//            tableView.addSubview(labelIconName)
+            //TODO add labels and images in a NSDictionary and get the information to set in the sidebar (content for sidebar)
+            //            tableView.addSubview(labelIconName)
             
             
             UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
@@ -107,10 +94,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             if let window = UIApplication.shared.keyWindow {
                 
                 
-//                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height: self.whiteView.frame.height)
+                //                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height:    self.whiteView.frame.height)
                 
                 
-                  self.whiteView.frame = CGRect(x: 0, y: 1000, width: -1000, height: -1000)
+                self.whiteView.frame = CGRect(x: 0, y: 1000, width: -1000, height: -1000)
                 
                 self.slideMenu.showSideBar(shouldOpen: false)
                 
@@ -122,8 +109,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         
         
     }
-    //
-    //
+
+    
     var slideMenu:SlideMenu = SlideMenu()
     //var slideMenuIcon:SlideMenu = SlideMenu()
     
@@ -215,17 +202,17 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     func handelSidebar(){
         
         if slideMenuIsOpen == true{
-//            slideMenu.showSideBar(shouldOpen: true)
+            //            slideMenu.showSideBar(shouldOpen: true)
             
-//            slideMenuIsOpen = false
+            //            slideMenuIsOpen = false
             
             showSettings()
             
         }else{
             
-           // slideMenu.showSideBar(shouldOpen: false)
+            // slideMenu.showSideBar(shouldOpen: false)
             
-           // slideMenuIsOpen = true
+            // slideMenuIsOpen = true
             
             handleDismiss()
             
