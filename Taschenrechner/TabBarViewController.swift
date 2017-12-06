@@ -46,14 +46,16 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             //
             var tableView: UITableView = UITableView()
             tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 1000)
+            tableView.backgroundColor = UIColor.black
             
-            //tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            tableView.separatorStyle = UITableViewCellSeparatorStyle.none
             whiteView.addSubview(tableView)
             
             
             // image for the Sidebar
             var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
-            bgView.frame =  CGRect(x: 0, y: 60, width: 320, height: 150)
+            bgView.contentMode = .scaleAspectFit
+            bgView.frame =  CGRect(x: 0, y: -90, width: 320, height: 300)
             
             bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
             tableView.addSubview(bgView)
@@ -186,17 +188,17 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     func handelSidebar(){
         
         if slideMenuIsOpen == true{
-            slideMenu.showSideBar(shouldOpen: true)
+//            slideMenu.showSideBar(shouldOpen: true)
             
-            slideMenuIsOpen = false
+//            slideMenuIsOpen = false
             
             showSettings()
             
         }else{
             
-            slideMenu.showSideBar(shouldOpen: false)
+           // slideMenu.showSideBar(shouldOpen: false)
             
-            slideMenuIsOpen = true
+           // slideMenuIsOpen = true
             
             handleDismiss()
             
