@@ -54,7 +54,7 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
   
     func setupSideBar(){
 
-        sideBarContainerView.frame = CGRect(x: -barWidth - 1, y: originView!.frame.origin.y, width: barWidth, height: originView!.frame.size.height)
+        sideBarContainerView.frame = CGRect(x: -barWidth - 1, y: originView!.frame.origin.y, width: barWidth-1.5, height: originView!.frame.size.height)
         sideBarContainerView.backgroundColor = UIColor.clear
         sideBarContainerView.clipsToBounds = false
         
