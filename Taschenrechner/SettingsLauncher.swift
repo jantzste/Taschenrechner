@@ -69,9 +69,9 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             
             collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: height)
             
-            
             blackView.frame = window.frame
             blackView.alpha = 0
+            
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 

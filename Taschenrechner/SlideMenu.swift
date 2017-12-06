@@ -98,14 +98,15 @@ class SlideMenu: NSObject, SlideMenuTableViewControllerDelegate {
         
     }
     
+    
     func showSideBar(shouldOpen:Bool){
+        
         animator.removeAllBehaviors()
         isSideBarOpen = shouldOpen
         
        // let gravityX:CGFloat = (shouldOpen) ? 0.5: -0.5
         let gravityX:CGFloat = (shouldOpen) ? 0.5: -6.0
         let magnitude:CGFloat = (shouldOpen) ? 20: -6.0
-//        let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth; -1
         let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth; -1
         
         let gravityBehavior: UIGravityBehavior = UIGravityBehavior(items: [sideBarContainerView])

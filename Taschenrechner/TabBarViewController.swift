@@ -1,4 +1,4 @@
-//
+//Save old sidebar version
 //  TabBarViewController.swift
 //  Taschenrechner
 //
@@ -9,31 +9,61 @@
 import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SlideMenuDelegate {
-
+    
     //TODO: add a blackview behind the sidebar
     
     let blackView = UIView()
     let cellHeight: CGFloat = 50
     
+    let whiteView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.white
+        return view
+    }()
+    
     //show menu
     func showSettings(){
-        
         if let window = UIApplication.shared.keyWindow{
             
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
             window.addSubview(blackView)
-            let height: CGFloat = CGFloat(100) * cellHeight
-            let y = window.frame.height - height
+            window.addSubview(whiteView)
+            //            let height: CGFloat = CGFloat(100) * cellHeight
+            //            let y = window.frame.height - height
+            let height: CGFloat = CGFloat(1000)
+            var y = window.frame.height - height
             
+            whiteView.frame = CGRect(x: 0, y: 0, width: 320, height: 1000)
             
             blackView.frame = window.frame
             blackView.alpha = 0
             
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            //            var backgroundView: UIView = UIView()
+            //            backgroundView.frame = CGRect(x: 0, y: 0, width: 320, height: 400)
+            //            backgroundView.backgroundColor = UIColor.black
+            //            whiteView.addSubview(backgroundView)
+            //
+            var tableView: UITableView = UITableView()
+            tableView.frame = CGRect(x: 0, y: 0, width: 320, height: 1000)
+            
+            //tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            whiteView.addSubview(tableView)
+            
+            
+            // image for the Sidebar
+            var bgView: UIImageView = UIImageView(image: UIImage(named: "food"))
+            bgView.frame =  CGRect(x: 0, y: 60, width: 320, height: 150)
+            
+            bgView.layer.borderColor = UIColor.lightGray.cgColor //set your color here
+            tableView.addSubview(bgView)
+            
+            UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
                 
                 self.blackView.alpha = 1
+                
+                self.whiteView.frame = CGRect(x: 0, y: 0, width: self.whiteView.frame.width, height: self.whiteView.frame.height)
+                
                 
                 
             } , completion: nil)
@@ -46,10 +76,12 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     //dissmiss if click on the blackView
     func handleDismiss() {
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
+                
+                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height: self.whiteView.frame.height)
                 
                 self.slideMenu.showSideBar(shouldOpen: false)
                 
@@ -61,8 +93,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         
         
     }
- 
-    
+    //
+    //
     var slideMenu:SlideMenu = SlideMenu()
     //var slideMenuIcon:SlideMenu = SlideMenu()
     
@@ -85,7 +117,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     //sidebar
     func slideMenuItems(){
         
-        //TODO: add the Logoimage in the the cell
+        //        TODO: add the Logoimage in the the cell
         
         
         slideMenu = SlideMenu(sourceView: self.view, menuItems: ["ITEM1", "ITEM2", "ITEM3", "ITEM4", "ITEM5", "ITEM6", "ITEM7", "ITEM8","ITEM9","ITEM10","ITEM11","ITEM12","ITEM13","ITEM14","ITEM15","ITEM16"]);
@@ -157,7 +189,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             slideMenu.showSideBar(shouldOpen: true)
             
             slideMenuIsOpen = false
-
+            
             showSettings()
             
         }else{
@@ -182,7 +214,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         navigationController?.pushViewController(dummySettingsViewController, animated: true)
     }
     
-
+    
     
     func renderTabBar(){
         
