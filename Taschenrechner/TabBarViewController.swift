@@ -10,10 +10,10 @@ import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate, SlideMenuDelegate {
     
-    //TODO: add a blackview behind the sidebar
-    
+    //blackview behind the sidebar
     let blackView = UIView()
     let cellHeight: CGFloat = 50
+    let fixHeightAndWith: CGFloat = 1000
     
     let whiteView: UIView = {
         let view = UIView()
@@ -32,7 +32,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         let image = UIImageView(image: UIImage(named:"food"))
         return image
     }()
-
+    
     //show menu
     func showSettings(){
         if let window = UIApplication.shared.keyWindow{
@@ -87,8 +87,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     
     //dissmiss if click on the blackView
     func handleDismiss() {
-        //
-        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        
+        UIView.animate(withDuration: 1.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
@@ -97,7 +97,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
                 //                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height:    self.whiteView.frame.height)
                 
                 
-                self.whiteView.frame = CGRect(x: 0, y: 1000, width: -1000, height: -1000)
+                self.whiteView.frame = CGRect(x: 0, y: self.fixHeightAndWith, width: -self.fixHeightAndWith, height: -self.fixHeightAndWith)
                 
                 self.slideMenu.showSideBar(shouldOpen: false)
                 
@@ -107,9 +107,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             
         })
         
-        
     }
-
+    
     
     var slideMenu:SlideMenu = SlideMenu()
     //var slideMenuIcon:SlideMenu = SlideMenu()
@@ -127,7 +126,37 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
         slideMenuItems()
         slideMenuIcons()
         
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeLeft)
+        
     }
+    
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                handelSidebar()
+                
+                print("Swiped right")
+                
+            case UISwipeGestureRecognizerDirection.left:
+                print("Swiped left")
+                handleDismiss()
+                
+            default:
+                break
+            }
+        }
+    }
+    
+    
     
     
     //sidebar
