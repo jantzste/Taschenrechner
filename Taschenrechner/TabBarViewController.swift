@@ -55,7 +55,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             tableView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             
             tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-            whiteView.addSubview(tableView)
+//            whiteView.addSubview(tableView)
+            window.addSubview(tableView)
+            
             
             imageBackground.contentMode = .scaleAspectFit
             imageBackground.frame =  CGRect(x: 0, y: -90, width: width, height: 300)
@@ -64,19 +66,21 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
             
             imageBackground.contentMode = .scaleAspectFit
             
-            tableView.addSubview(imageBackground)
+            tableView.backgroundColor = UIColor.blue
+//            tableView.addSubview(imageBackground)
             
+            window.addSubview(imageBackground)
+
             //TODO add labels and images in a NSDictionary and get the information to set in the sidebar (content for sidebar)
             //            tableView.addSubview(labelIconName)
             
             
-            UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
                 
                 self.blackView.alpha = 1
                 
                 self.whiteView.frame = CGRect(x: 0, y: 0, width: self.whiteView.frame.width, height: self.whiteView.frame.height)
-                
-                
+
                 
             } , completion: nil)
             
@@ -88,24 +92,35 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     //dissmiss if click on the blackView
     func handleDismiss() {
         
-        UIView.animate(withDuration: 1.2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
                 
                 
-                //                self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height:    self.whiteView.frame.height)
+                //self.whiteView.frame = CGRect(x: 0, y: window.frame.height, width: self.whiteView.frame.width, height:    self.whiteView.frame.height)
                 
                 
+//                self.whiteView.frame = CGRect(x: 0, y: self.fixHeightAndWith, width: -self.fixHeightAndWith, height: -self.fixHeightAndWith)
+
+                self.imageBackground.frame = CGRect(x: -100, y: 400, width: -self.fixHeightAndWith, height: -self.fixHeightAndWith)
+//
+                self.tableView.frame = CGRect(x: -100, y: 400, width: -self.fixHeightAndWith, height: -self.fixHeightAndWith)
                 self.whiteView.frame = CGRect(x: 0, y: self.fixHeightAndWith, width: -self.fixHeightAndWith, height: -self.fixHeightAndWith)
+                
+                
+
                 
                 self.slideMenu.showSideBar(shouldOpen: false)
                 
                 self.slideMenuIsOpen = true
                 
+                
             }
             
         })
+        
+        
         
     }
     
@@ -148,8 +163,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
                 
             case UISwipeGestureRecognizerDirection.left:
                 print("Swiped left")
-                handleDismiss()
-                
+  
+//TODO close the sidebar if you swiped left
             default:
                 break
             }
@@ -187,7 +202,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate, Slid
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         renderTabBar()
-        
+ 
     }
     
     override var prefersStatusBarHidden: Bool{
